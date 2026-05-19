@@ -1,0 +1,1846 @@
+
+> backend@0.0.0 dev
+> nodemon ./src/server.js
+
+[33m[nodemon] 3.1.14[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+GlucoTwin API listening on port 3000
+[0mOPTIONS /api/auth/me [32m204 [0m1.339 ms - 0[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.062 ms - 0[0m
+[0mGET /api/auth/me [33m401 [0m5.065 ms - 86[0m
+[0mGET /api/auth/me [33m401 [0m0.651 ms - 86[0m
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[0mOPTIONS /api/auth/login [32m204 [0m0.253 ms - 0[0m
+[0mPOST /api/auth/login [32m200 [0m263.689 ms - 829[0m
+[0mOPTIONS /api/doctor/stats [32m204 [0m0.050 ms - 0[0m
+[0mGET /api/doctor/stats [32m200 [0m0.599 ms - 261[0m
+[0mOPTIONS /api/doctor/stats [32m204 [0m0.041 ms - 0[0m
+[0mGET /api/doctor/stats [36m304 [0m0.445 ms - -[0m
+[0mOPTIONS /api/auth/logout [32m204 [0m0.280 ms - 0[0m
+[0mPOST /api/auth/logout [32m200 [0m2.776 ms - 39[0m
+[0mOPTIONS /api/auth/login [32m204 [0m0.281 ms - 0[0m
+[0mPOST /api/auth/login [32m200 [0m253.757 ms - 824[0m
+[0mOPTIONS /api/admin/stats [32m204 [0m0.075 ms - 0[0m
+[0mOPTIONS /api/admin/stats [32m204 [0m0.020 ms - 0[0m
+[0mGET /api/admin/stats [32m200 [0m0.745 ms - 2532[0m
+[0mGET /api/admin/stats [32m200 [0m0.427 ms - 2532[0m
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[0mOPTIONS /api/auth/me [32m204 [0m0.106 ms - 0[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.061 ms - 0[0m
+[0mGET /api/auth/me [32m200 [0m0.985 ms - 824[0m
+[0mGET /api/auth/me [36m304 [0m0.599 ms - -[0m
+[0mOPTIONS /api/admin/stats [32m204 [0m0.060 ms - 0[0m
+[0mOPTIONS /api/admin/stats [32m204 [0m0.031 ms - 0[0m
+[0mGET /api/admin/stats [32m200 [0m0.973 ms - 2532[0m
+[0mGET /api/admin/stats [32m200 [0m0.625 ms - 2532[0m
+[0mOPTIONS /api/auth/logout [32m204 [0m0.210 ms - 0[0m
+[0mPOST /api/auth/logout [32m200 [0m0.720 ms - 39[0m
+[0mOPTIONS /api/auth/register [32m204 [0m0.365 ms - 0[0m
+[0mPOST /api/auth/register [32m201 [0m250.888 ms - 819[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.066 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.085 ms - 0[0m
+[0mGET /api/patient/summary [32m200 [0m1.696 ms - 1988[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.032 ms - 0[0m
+[0mGET /api/patient/summary [36m304 [0m0.399 ms - -[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.130 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.057 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.021 ms - 0[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.537 ms - -[0m
+[0mGET /api/announcements/active [32m200 [0m1.178 ms - 240[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.397 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.286 ms - -[0m
+[0mGET /api/patient/timeline [32m200 [0m0.955 ms - 1496[0m
+[0mGET /api/patient/timeline [36m304 [0m0.232 ms - -[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.066 ms - 0[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.063 ms - 0[0m
+[0mGET /api/auth/me [32m200 [0m0.630 ms - 819[0m
+[0mGET /api/auth/me [36m304 [0m0.435 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.436 ms - -[0m
+[0mGET /api/patient/summary [36m304 [0m0.538 ms - -[0m
+[0mGET /api/patient/timeline [36m304 [0m0.409 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.287 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.178 ms - -[0m
+[0mGET /api/patient/timeline [36m304 [0m0.360 ms - -[0m
+[0mGET /api/patient/summary [36m304 [0m0.577 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.254 ms - -[0m
+[0mOPTIONS /api/auth/logout [32m204 [0m0.127 ms - 0[0m
+[0mPOST /api/auth/logout [32m200 [0m0.851 ms - 39[0m
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[0mOPTIONS /api/auth/me [32m204 [0m0.198 ms - 0[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.034 ms - 0[0m
+[0mGET /api/auth/me [33m401 [0m0.803 ms - 83[0m
+[0mGET /api/auth/me [33m401 [0m0.140 ms - 83[0m
+[0mGET /api/auth/me [33m401 [0m0.281 ms - 83[0m
+[0mGET /api/auth/me [33m401 [0m0.274 ms - 83[0m
+[0mOPTIONS /api/auth/login [32m204 [0m0.289 ms - 0[0m
+[0mPOST /api/auth/login [32m200 [0m248.629 ms - 824[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.039 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.124 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.025 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.018 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.017 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.011 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.177 ms - -[0m
+[0mGET /api/patient/timeline [36m304 [0m0.412 ms - -[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.050 ms - 0[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.206 ms - -[0m
+[0mGET /api/patient/timeline [36m304 [0m0.159 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.135 ms - -[0m
+[0mGET /api/patient/summary [32m200 [0m0.253 ms - 1988[0m
+[0mGET /api/announcements/active [36m304 [0m0.212 ms - -[0m
+[0mGET /api/patient/summary [36m304 [0m0.189 ms - -[0m
+[0mOPTIONS /api/admin/stats [32m204 [0m0.164 ms - 0[0m
+[0mOPTIONS /api/admin/stats [32m204 [0m0.088 ms - 0[0m
+[0mGET /api/admin/stats [32m200 [0m1.620 ms - 3287[0m
+[0mGET /api/admin/stats [32m200 [0m0.775 ms - 3287[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.110 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.048 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.039 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.072 ms - 0[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.032 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.038 ms - 0[0m
+[0mGET /api/patient/timeline [36m304 [0m0.566 ms - -[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.040 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.049 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.317 ms - -[0m
+[0mGET /api/patient/timeline [36m304 [0m0.781 ms - -[0m
+[0mGET /api/patient/summary [36m304 [0m0.935 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.293 ms - -[0m
+[0mGET /api/patient/summary [36m304 [0m0.744 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.553 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.374 ms - -[0m
+[0mGET /api/admin/stats [32m200 [0m1.910 ms - 3287[0m
+[0mGET /api/admin/stats [32m200 [0m1.304 ms - 3287[0m
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[0mOPTIONS /api/admin/users [32m204 [0m1.047 ms - 0[0m
+[0mOPTIONS /api/admin/users [32m204 [0m0.036 ms - 0[0m
+[0mGET /api/admin/users [32m200 [0m3.044 ms - 3070[0m
+[0mGET /api/admin/users [36m304 [0m0.821 ms - -[0m
+[0mOPTIONS /api/admin/announcements [32m204 [0m0.100 ms - 0[0m
+[0mOPTIONS /api/admin/announcements [32m204 [0m0.061 ms - 0[0m
+[0mGET /api/admin/announcements [32m200 [0m1.599 ms - 240[0m
+[0mGET /api/admin/announcements [36m304 [0m0.905 ms - -[0m
+[0mOPTIONS /api/admin/settings [32m204 [0m0.107 ms - 0[0m
+[0mOPTIONS /api/admin/settings [32m204 [0m0.039 ms - 0[0m
+[0mGET /api/admin/settings [32m200 [0m0.854 ms - 205[0m
+[0mGET /api/admin/settings [36m304 [0m0.487 ms - -[0m
+[0mOPTIONS /api/admin/announcements [32m204 [0m0.193 ms - 0[0m
+[0mOPTIONS /api/admin/announcements [32m204 [0m0.061 ms - 0[0m
+[0mGET /api/admin/announcements [36m304 [0m0.931 ms - -[0m
+[0mGET /api/admin/announcements [36m304 [0m0.544 ms - -[0m
+[0mGET /api/admin/settings [36m304 [0m1.520 ms - -[0m
+[0mGET /api/admin/settings [36m304 [0m0.785 ms - -[0m
+[0mOPTIONS /api/admin/system [32m204 [0m0.206 ms - 0[0m
+[0mOPTIONS /api/admin/system [32m204 [0m0.078 ms - 0[0m
+[0mGET /api/admin/system [32m200 [0m1.487 ms - 173[0m
+[0mGET /api/health [36m304 [0m0.296 ms - -[0m
+[0mGET /api/admin/system [32m200 [0m0.675 ms - 173[0m
+[0mGET /api/health [36m304 [0m0.099 ms - -[0m
+[0mOPTIONS /api/admin/settings [32m204 [0m0.071 ms - 0[0m
+[0mOPTIONS /api/admin/settings [32m204 [0m0.057 ms - 0[0m
+[0mGET /api/admin/settings [36m304 [0m1.011 ms - -[0m
+[0mGET /api/admin/settings [36m304 [0m0.640 ms - -[0m
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[0mOPTIONS /api/admin/stats [32m204 [0m0.165 ms - 0[0m
+[0mOPTIONS /api/admin/stats [32m204 [0m0.038 ms - 0[0m
+[0mGET /api/admin/stats [32m200 [0m1.611 ms - 3287[0m
+[0mGET /api/admin/stats [32m200 [0m1.034 ms - 3287[0m
+[0mOPTIONS /api/admin/users [32m204 [0m0.173 ms - 0[0m
+[0mOPTIONS /api/admin/users [32m204 [0m0.058 ms - 0[0m
+[0mGET /api/admin/users [36m304 [0m1.285 ms - -[0m
+[0mGET /api/admin/users [36m304 [0m0.907 ms - -[0m
+[0mOPTIONS /api/admin/stats [32m204 [0m0.104 ms - 0[0m
+[0mOPTIONS /api/admin/stats [32m204 [0m0.056 ms - 0[0m
+[0mGET /api/admin/stats [32m200 [0m1.515 ms - 3287[0m
+[0mGET /api/admin/stats [32m200 [0m1.106 ms - 3287[0m
+[0mOPTIONS /api/admin/users [32m204 [0m0.170 ms - 0[0m
+[0mOPTIONS /api/admin/users [32m204 [0m0.053 ms - 0[0m
+[0mGET /api/admin/users [36m304 [0m1.135 ms - -[0m
+[0mGET /api/admin/users [36m304 [0m1.059 ms - -[0m
+[0mGET /api/admin/export/users [32m200 [0m1.753 ms - 650[0m
+[0mGET /api/admin/export/users [36m304 [0m1.861 ms - -[0m
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[0mOPTIONS /api/admin/announcements [32m204 [0m0.098 ms - 0[0m
+[0mOPTIONS /api/admin/announcements [32m204 [0m0.048 ms - 0[0m
+[0mGET /api/admin/announcements [36m304 [0m0.968 ms - -[0m
+[0mGET /api/admin/announcements [36m304 [0m0.769 ms - -[0m
+[0mOPTIONS /api/admin/announcements [32m204 [0m0.127 ms - 0[0m
+[0mPOST /api/admin/announcements [32m201 [0m7.490 ms - 170[0m
+[0mGET /api/admin/announcements [32m200 [0m1.254 ms - 394[0m
+[0mOPTIONS /api/admin/settings [32m204 [0m0.142 ms - 0[0m
+[0mOPTIONS /api/admin/settings [32m204 [0m0.062 ms - 0[0m
+[0mGET /api/admin/settings [36m304 [0m1.157 ms - -[0m
+[0mGET /api/admin/settings [36m304 [0m0.914 ms - -[0m
+[0mOPTIONS /api/admin/system [32m204 [0m0.134 ms - 0[0m
+[0mGET /api/health [36m304 [0m0.342 ms - -[0m
+[0mGET /api/health [36m304 [0m0.181 ms - -[0m
+[0mOPTIONS /api/admin/system [32m204 [0m0.039 ms - 0[0m
+[0mGET /api/admin/system [32m200 [0m1.106 ms - 174[0m
+[0mGET /api/admin/system [36m304 [0m0.696 ms - -[0m
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[0mOPTIONS /api/admin/audit?limit=200 [32m204 [0m0.138 ms - 0[0m
+[0mOPTIONS /api/admin/audit?limit=200 [32m204 [0m0.111 ms - 0[0m
+[0mGET /api/admin/audit?limit=200 [32m200 [0m1.259 ms - 14[0m
+[0mGET /api/admin/audit?limit=200 [36m304 [0m0.882 ms - -[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.041 ms - 0[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.044 ms - 0[0m
+[0mGET /api/auth/me [32m200 [0m0.431 ms - 824[0m
+[0mGET /api/auth/me [36m304 [0m0.258 ms - -[0m
+[0mOPTIONS /api/admin/system [32m204 [0m0.116 ms - 0[0m
+[0mOPTIONS /api/admin/system [32m204 [0m0.109 ms - 0[0m
+[0mGET /api/admin/system [32m200 [0m1.396 ms - 174[0m
+[0mGET /api/health [36m304 [0m0.177 ms - -[0m
+[0mGET /api/admin/system [32m200 [0m0.609 ms - 174[0m
+[0mGET /api/health [36m304 [0m0.194 ms - -[0m
+[0mOPTIONS /api/admin/audit?limit=200 [32m204 [0m0.160 ms - 0[0m
+[0mOPTIONS /api/admin/audit?limit=200 [32m204 [0m0.050 ms - 0[0m
+[0mGET /api/admin/audit?limit=200 [36m304 [0m0.794 ms - -[0m
+[0mGET /api/admin/audit?limit=200 [36m304 [0m0.596 ms - -[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.067 ms - 0[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.036 ms - 0[0m
+[0mGET /api/auth/me [36m304 [0m0.534 ms - -[0m
+[0mGET /api/auth/me [36m304 [0m0.312 ms - -[0m
+[0mOPTIONS /api/admin/settings [32m204 [0m0.111 ms - 0[0m
+[0mOPTIONS /api/admin/settings [32m204 [0m0.072 ms - 0[0m
+[0mGET /api/admin/settings [36m304 [0m1.029 ms - -[0m
+[0mGET /api/admin/settings [36m304 [0m0.407 ms - -[0m
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[0mOPTIONS /api/admin/stats [32m204 [0m0.166 ms - 0[0m
+[0mOPTIONS /api/admin/stats [32m204 [0m0.091 ms - 0[0m
+[0mGET /api/admin/stats [32m200 [0m1.345 ms - 3287[0m
+[0mGET /api/admin/stats [32m200 [0m1.099 ms - 3287[0m
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[0mOPTIONS /api/admin/users [32m204 [0m0.189 ms - 0[0m
+[0mOPTIONS /api/admin/users [32m204 [0m0.046 ms - 0[0m
+[0mGET /api/admin/users [36m304 [0m1.696 ms - -[0m
+[0mGET /api/admin/users [36m304 [0m0.960 ms - -[0m
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[0mOPTIONS /api/admin/users?search=yousef [32m204 [0m0.172 ms - 0[0m
+[0mGET /api/admin/users?search=yousef [32m200 [0m1.252 ms - 12[0m
+[0mOPTIONS /api/admin/users?search=ba [32m204 [0m0.087 ms - 0[0m
+[0mGET /api/admin/users?search=ba [32m200 [0m1.788 ms - 766[0m
+[0mOPTIONS /api/admin/users [32m204 [0m0.206 ms - 0[0m
+[0mGET /api/admin/users [36m304 [0m1.476 ms - -[0m
+[0mOPTIONS /api/admin/announcements [32m204 [0m0.167 ms - 0[0m
+[0mOPTIONS /api/admin/announcements [32m204 [0m0.093 ms - 0[0m
+[0mGET /api/admin/announcements [36m304 [0m1.206 ms - -[0m
+[0mGET /api/admin/announcements [36m304 [0m0.587 ms - -[0m
+[0mOPTIONS /api/admin/announcements/7449e62e-e1a4-4fa4-9b65-c0671effc595 [32m204 [0m0.210 ms - 0[0m
+[0mPATCH /api/admin/announcements/7449e62e-e1a4-4fa4-9b65-c0671effc595 [32m200 [0m3.908 ms - 170[0m
+[0mGET /api/admin/announcements [36m304 [0m0.760 ms - -[0m
+[0mOPTIONS /api/admin/settings [32m204 [0m0.124 ms - 0[0m
+[0mOPTIONS /api/admin/settings [32m204 [0m0.058 ms - 0[0m
+[0mGET /api/admin/settings [36m304 [0m0.932 ms - -[0m
+[0mGET /api/admin/settings [36m304 [0m0.844 ms - -[0m
+[0mOPTIONS /api/admin/system [32m204 [0m0.098 ms - 0[0m
+[0mOPTIONS /api/admin/system [32m204 [0m0.094 ms - 0[0m
+[0mGET /api/health [36m304 [0m0.283 ms - -[0m
+[0mGET /api/admin/system [32m200 [0m0.851 ms - 174[0m
+[0mGET /api/health [36m304 [0m0.114 ms - -[0m
+[0mGET /api/admin/system [32m200 [0m0.474 ms - 174[0m
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[0mOPTIONS /api/admin/stats [32m204 [0m0.114 ms - 0[0m
+[0mOPTIONS /api/admin/stats [32m204 [0m0.064 ms - 0[0m
+[0mGET /api/admin/stats [32m200 [0m1.379 ms - 3287[0m
+[0mGET /api/admin/stats [32m200 [0m0.813 ms - 3287[0m
+[0mOPTIONS /api/admin/users [32m204 [0m0.135 ms - 0[0m
+[0mOPTIONS /api/admin/users [32m204 [0m0.051 ms - 0[0m
+[0mGET /api/admin/users [36m304 [0m0.689 ms - -[0m
+[0mGET /api/admin/users [36m304 [0m0.447 ms - -[0m
+[0mOPTIONS /api/admin/announcements [32m204 [0m0.076 ms - 0[0m
+[0mOPTIONS /api/admin/announcements [32m204 [0m0.034 ms - 0[0m
+[0mGET /api/admin/announcements [36m304 [0m0.632 ms - -[0m
+[0mGET /api/admin/announcements [36m304 [0m0.575 ms - -[0m
+[0mOPTIONS /api/admin/settings [32m204 [0m0.226 ms - 0[0m
+[0mOPTIONS /api/admin/settings [32m204 [0m0.085 ms - 0[0m
+[0mGET /api/admin/settings [36m304 [0m1.208 ms - -[0m
+[0mGET /api/admin/settings [36m304 [0m0.326 ms - -[0m
+[0mOPTIONS /api/admin/system [32m204 [0m0.103 ms - 0[0m
+[0mOPTIONS /api/admin/system [32m204 [0m0.041 ms - 0[0m
+[0mGET /api/admin/system [32m200 [0m1.067 ms - 174[0m
+[0mGET /api/health [36m304 [0m0.149 ms - -[0m
+[0mGET /api/health [36m304 [0m0.165 ms - -[0m
+[0mGET /api/admin/system [32m200 [0m0.609 ms - 174[0m
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[0mOPTIONS /api/announcements/active [32m204 [0m0.136 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.056 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.132 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.054 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.029 ms - 0[0m
+[0mGET /api/announcements/active [32m200 [0m0.874 ms - 394[0m
+[0mGET /api/patient/summary [36m304 [0m1.122 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.345 ms - -[0m
+[0mGET /api/patient/timeline [36m304 [0m0.652 ms - -[0m
+[0mGET /api/patient/summary [36m304 [0m0.481 ms - -[0m
+[0mGET /api/patient/timeline [36m304 [0m0.975 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.564 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.204 ms - -[0m
+[0mOPTIONS /api/admin/stats [32m204 [0m0.192 ms - 0[0m
+[0mOPTIONS /api/admin/stats [32m204 [0m0.053 ms - 0[0m
+[0mGET /api/admin/stats [32m200 [0m1.653 ms - 3287[0m
+[0mGET /api/admin/stats [32m200 [0m1.017 ms - 3287[0m
+[0mOPTIONS /api/admin/announcements [32m204 [0m0.080 ms - 0[0m
+[0mOPTIONS /api/admin/announcements [32m204 [0m0.080 ms - 0[0m
+[0mGET /api/admin/announcements [36m304 [0m0.974 ms - -[0m
+[0mGET /api/admin/announcements [36m304 [0m0.607 ms - -[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.106 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.034 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.034 ms - 0[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.025 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.034 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.031 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.033 ms - 0[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.547 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.175 ms - -[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.031 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.154 ms - -[0m
+[0mGET /api/patient/summary [36m304 [0m0.513 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.642 ms - -[0m
+[0mGET /api/patient/timeline [36m304 [0m0.675 ms - -[0m
+[0mGET /api/patient/summary [36m304 [0m0.796 ms - -[0m
+[0mGET /api/patient/timeline [36m304 [0m0.572 ms - -[0m
+[0mOPTIONS /api/admin/stats [32m204 [0m0.081 ms - 0[0m
+[0mOPTIONS /api/admin/stats [32m204 [0m0.043 ms - 0[0m
+[0mGET /api/admin/stats [32m200 [0m1.145 ms - 3287[0m
+[0mGET /api/admin/stats [32m200 [0m0.805 ms - 3287[0m
+[0mOPTIONS /api/admin/system [32m204 [0m0.096 ms - 0[0m
+[0mOPTIONS /api/admin/system [32m204 [0m0.076 ms - 0[0m
+[0mGET /api/health [36m304 [0m0.244 ms - -[0m
+[0mGET /api/admin/system [32m200 [0m0.909 ms - 174[0m
+[0mGET /api/health [36m304 [0m0.118 ms - -[0m
+[0mGET /api/admin/system [36m304 [0m0.417 ms - -[0m
+[0mOPTIONS /api/admin/settings [32m204 [0m0.155 ms - 0[0m
+[0mOPTIONS /api/admin/settings [32m204 [0m0.045 ms - 0[0m
+[0mGET /api/admin/settings [36m304 [0m0.838 ms - -[0m
+[0mGET /api/admin/settings [36m304 [0m0.706 ms - -[0m
+[0mOPTIONS /api/admin/announcements [32m204 [0m0.279 ms - 0[0m
+[0mOPTIONS /api/admin/announcements [32m204 [0m0.102 ms - 0[0m
+[0mGET /api/admin/announcements [36m304 [0m1.233 ms - -[0m
+[0mGET /api/admin/announcements [36m304 [0m0.585 ms - -[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.052 ms - 0[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.029 ms - 0[0m
+[0mGET /api/auth/me [36m304 [0m0.461 ms - -[0m
+[0mGET /api/auth/me [36m304 [0m0.302 ms - -[0m
+[0mOPTIONS /api/admin/announcements [32m204 [0m0.078 ms - 0[0m
+[0mOPTIONS /api/admin/announcements [32m204 [0m0.026 ms - 0[0m
+[0mGET /api/admin/announcements [36m304 [0m1.255 ms - -[0m
+[0mGET /api/admin/announcements [36m304 [0m0.587 ms - -[0m
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[0mOPTIONS /api/auth/login [32m204 [0m0.143 ms - 0[0m
+[0mPOST /api/auth/login [33m401 [0m251.292 ms - 76[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.115 ms - 0[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.092 ms - 0[0m
+[0mGET /api/auth/me [33m401 [0m0.672 ms - 86[0m
+[0mGET /api/auth/me [33m401 [0m0.368 ms - 86[0m
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[0mOPTIONS /api/auth/login [32m204 [0m0.134 ms - 0[0m
+[0mPOST /api/auth/login [33m401 [0m252.322 ms - 76[0m
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[0mOPTIONS /api/auth/me [32m204 [0m0.252 ms - 0[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.045 ms - 0[0m
+[0mGET /api/auth/me [33m401 [0m0.492 ms - 86[0m
+[0mGET /api/auth/me [33m401 [0m0.492 ms - 86[0m
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[0mOPTIONS /api/auth/me [32m204 [0m0.122 ms - 0[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.047 ms - 0[0m
+[0mGET /api/auth/me [33m401 [0m1.018 ms - 86[0m
+[0mGET /api/auth/me [33m401 [0m0.382 ms - 86[0m
+[0mOPTIONS /api/auth/login [32m204 [0m0.061 ms - 0[0m
+[0mPOST /api/auth/login [33m401 [0m253.182 ms - 76[0m
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[0mGET /login [33m404 [0m0.811 ms - 74[0m
+[0mGET /favicon.ico [33m404 [0m0.232 ms - 80[0m
+[0mGET /login [33m404 [0m0.476 ms - 74[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.049 ms - 0[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.183 ms - 0[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.057 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.022 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.111 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.038 ms - 0[0m
+[0mGET /api/announcements/active [32m200 [0m0.349 ms - 394[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.028 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.025 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.035 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.176 ms - -[0m
+[0mGET /api/patient/summary [33m401 [0m0.509 ms - 86[0m
+[0mGET /api/patient/summary [33m401 [0m0.548 ms - 86[0m
+[0mGET /api/glucotwin/treatment-plans/pending [33m401 [0m0.456 ms - 86[0m
+[0mGET /api/patient/timeline [33m401 [0m0.385 ms - 86[0m
+[0mGET /api/glucotwin/treatment-plans/pending [33m401 [0m0.399 ms - 86[0m
+[0mGET /api/patient/timeline [33m401 [0m0.416 ms - 86[0m
+[0mGET /api/announcements/active [36m304 [0m0.433 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m1.054 ms - -[0m
+[0mGET /api/patient/summary [33m401 [0m0.763 ms - 86[0m
+[0mGET /api/patient/timeline [33m401 [0m0.812 ms - 86[0m
+[0mGET /api/glucotwin/treatment-plans/pending [33m401 [0m0.655 ms - 86[0m
+[0mGET /api/patient/summary [33m401 [0m0.574 ms - 86[0m
+[0mGET /api/patient/timeline [33m401 [0m0.377 ms - 86[0m
+[0mGET /api/glucotwin/treatment-plans/pending [33m401 [0m0.878 ms - 86[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.058 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.048 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.025 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.016 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.029 ms - 0[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.033 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.019 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.052 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.489 ms - -[0m
+[0mGET /api/patient/summary [33m401 [0m0.450 ms - 86[0m
+[0mGET /api/patient/timeline [33m401 [0m0.488 ms - 86[0m
+[0mGET /api/glucotwin/treatment-plans/pending [33m401 [0m0.357 ms - 86[0m
+[0mGET /api/patient/summary [33m401 [0m0.240 ms - 86[0m
+[0mGET /api/announcements/active [36m304 [0m0.162 ms - -[0m
+[0mGET /api/patient/timeline [33m401 [0m0.654 ms - 86[0m
+[0mGET /api/glucotwin/treatment-plans/pending [33m401 [0m0.531 ms - 86[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.070 ms - 0[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.204 ms - 0[0m
+[0mGET /api/auth/me [33m401 [0m0.449 ms - 86[0m
+[0mGET /api/auth/me [33m401 [0m0.608 ms - 86[0m
+[0mOPTIONS /api/auth/login [32m204 [0m0.128 ms - 0[0m
+[0mPOST /api/auth/login [33m401 [0m252.186 ms - 76[0m
+[0mPOST /api/auth/login [33m401 [0m252.719 ms - 76[0m
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[0mOPTIONS /api/auth/login [32m204 [0m0.104 ms - 0[0m
+[0mPOST /api/auth/login [33m401 [0m250.698 ms - 76[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.051 ms - 0[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.050 ms - 0[0m
+[0mGET /api/auth/me [36m304 [0m0.716 ms - -[0m
+[0mGET /api/auth/me [36m304 [0m0.541 ms - -[0m
+[0mOPTIONS /api/admin/stats [32m204 [0m0.068 ms - 0[0m
+[0mOPTIONS /api/admin/stats [32m204 [0m0.035 ms - 0[0m
+[0mGET /api/admin/stats [32m200 [0m0.849 ms - 3287[0m
+[0mGET /api/admin/stats [32m200 [0m0.488 ms - 3287[0m
+[0mGET /api/admin/stats [32m200 [0m1.754 ms - 3287[0m
+[0mGET /api/admin/stats [32m200 [0m0.721 ms - 3287[0m
+[0mOPTIONS /api/auth/logout [32m204 [0m0.129 ms - 0[0m
+[0mPOST /api/auth/logout [32m200 [0m0.839 ms - 39[0m
+[0mOPTIONS /api/auth/login [32m204 [0m0.166 ms - 0[0m
+[0mPOST /api/auth/login [32m200 [0m249.615 ms - 824[0m
+[0mOPTIONS /api/admin/stats [32m204 [0m0.025 ms - 0[0m
+[0mOPTIONS /api/admin/stats [32m204 [0m0.020 ms - 0[0m
+[0mGET /api/admin/stats [32m200 [0m0.358 ms - 3287[0m
+[0mGET /api/admin/stats [32m200 [0m0.246 ms - 3287[0m
+[0mOPTIONS /api/admin/stats [32m204 [0m0.058 ms - 0[0m
+[0mOPTIONS /api/admin/stats [32m204 [0m0.079 ms - 0[0m
+[0mGET /api/admin/stats [32m200 [0m0.901 ms - 3287[0m
+[0mGET /api/admin/stats [32m200 [0m0.463 ms - 3287[0m
+[0mOPTIONS /api/auth/logout [32m204 [0m0.112 ms - 0[0m
+[0mPOST /api/auth/logout [32m200 [0m0.606 ms - 39[0m
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[0mOPTIONS /api/auth/login [32m204 [0m0.119 ms - 0[0m
+[0mPOST /api/auth/login [32m200 [0m250.028 ms - 824[0m
+[0mOPTIONS /api/admin/stats [32m204 [0m0.069 ms - 0[0m
+[0mOPTIONS /api/admin/stats [32m204 [0m0.025 ms - 0[0m
+[0mGET /api/admin/stats [32m200 [0m0.536 ms - 3287[0m
+[0mGET /api/admin/stats [36m304 [0m0.422 ms - -[0m
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[0mOPTIONS /api/admin/system [32m204 [0m0.140 ms - 0[0m
+[0mOPTIONS /api/admin/system [32m204 [0m0.161 ms - 0[0m
+[0mGET /api/health [36m304 [0m0.252 ms - -[0m
+[0mGET /api/admin/system [32m200 [0m0.980 ms - 174[0m
+[0mGET /api/health [36m304 [0m0.120 ms - -[0m
+[0mGET /api/admin/system [32m200 [0m0.410 ms - 174[0m
+[0mOPTIONS /api/admin/audit?limit=200 [32m204 [0m0.094 ms - 0[0m
+[0mOPTIONS /api/admin/audit?limit=200 [32m204 [0m0.041 ms - 0[0m
+[0mGET /api/admin/audit?limit=200 [36m304 [0m0.948 ms - -[0m
+[0mGET /api/admin/audit?limit=200 [36m304 [0m0.548 ms - -[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.054 ms - 0[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.033 ms - 0[0m
+[0mGET /api/auth/me [36m304 [0m0.528 ms - -[0m
+[0mGET /api/auth/me [36m304 [0m0.397 ms - -[0m
+[0mOPTIONS /api/admin/system [32m204 [0m0.071 ms - 0[0m
+[0mOPTIONS /api/admin/system [32m204 [0m0.036 ms - 0[0m
+[0mGET /api/health [36m304 [0m0.239 ms - -[0m
+[0mGET /api/admin/system [32m200 [0m0.731 ms - 174[0m
+[0mGET /api/health [36m304 [0m0.108 ms - -[0m
+[0mGET /api/admin/system [36m304 [0m0.465 ms - -[0m
+[0mOPTIONS /api/admin/announcements [32m204 [0m0.087 ms - 0[0m
+[0mOPTIONS /api/admin/announcements [32m204 [0m0.037 ms - 0[0m
+[0mGET /api/admin/announcements [36m304 [0m1.004 ms - -[0m
+[0mGET /api/admin/announcements [36m304 [0m0.647 ms - -[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.399 ms - 0[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.052 ms - 0[0m
+[0mGET /api/auth/me [33m401 [0m0.887 ms - 83[0m
+[0mGET /api/auth/me [33m401 [0m0.174 ms - 83[0m
+[0mOPTIONS /api/auth/logout [32m204 [0m0.114 ms - 0[0m
+[0mPOST /api/auth/logout [32m200 [0m1.253 ms - 39[0m
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[0mOPTIONS /api/auth/login [32m204 [0m0.164 ms - 0[0m
+[0mPOST /api/auth/login [33m401 [0m251.958 ms - 76[0m
+[0mOPTIONS /api/auth/login [32m204 [0m0.191 ms - 0[0m
+[0mPOST /api/auth/login [32m200 [0m250.170 ms - 824[0m
+[0mOPTIONS /api/admin/stats [32m204 [0m0.033 ms - 0[0m
+[0mOPTIONS /api/admin/stats [32m204 [0m0.013 ms - 0[0m
+[0mGET /api/admin/stats [32m200 [0m0.467 ms - 3287[0m
+[0mGET /api/admin/stats [32m200 [0m0.181 ms - 3287[0m
+[0mOPTIONS /api/admin/announcements [32m204 [0m0.199 ms - 0[0m
+[0mOPTIONS /api/admin/announcements [32m204 [0m0.037 ms - 0[0m
+[0mGET /api/admin/announcements [32m200 [0m0.631 ms - 394[0m
+[0mGET /api/admin/announcements [32m200 [0m0.372 ms - 394[0m
+[0mOPTIONS /api/admin/announcements/7449e62e-e1a4-4fa4-9b65-c0671effc595 [32m204 [0m0.124 ms - 0[0m
+[0mDELETE /api/admin/announcements/7449e62e-e1a4-4fa4-9b65-c0671effc595 [32m204 [0m2.024 ms - -[0m
+[0mGET /api/admin/announcements [32m200 [0m1.069 ms - 240[0m
+[0mOPTIONS /api/admin/audit?limit=200 [32m204 [0m0.125 ms - 0[0m
+[0mOPTIONS /api/admin/audit?limit=200 [32m204 [0m0.084 ms - 0[0m
+[0mGET /api/admin/audit?limit=200 [32m200 [0m0.772 ms - 14[0m
+[0mGET /api/admin/audit?limit=200 [32m200 [0m0.759 ms - 14[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.051 ms - 0[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.041 ms - 0[0m
+[0mGET /api/auth/me [32m200 [0m0.824 ms - 824[0m
+[0mGET /api/auth/me [32m200 [0m0.277 ms - 824[0m
+[0mOPTIONS /api/admin/stats [32m204 [0m0.124 ms - 0[0m
+[0mOPTIONS /api/admin/stats [32m204 [0m0.051 ms - 0[0m
+[0mGET /api/admin/stats [32m200 [0m1.123 ms - 3287[0m
+[0mGET /api/admin/stats [32m200 [0m0.370 ms - 3287[0m
+[0mOPTIONS /api/admin/audit?limit=200 [32m204 [0m0.055 ms - 0[0m
+[0mOPTIONS /api/admin/audit?limit=200 [32m204 [0m0.058 ms - 0[0m
+[0mGET /api/admin/audit?limit=200 [36m304 [0m0.716 ms - -[0m
+[0mGET /api/admin/audit?limit=200 [36m304 [0m0.277 ms - -[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.092 ms - 0[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.081 ms - 0[0m
+[0mGET /api/auth/me [36m304 [0m0.732 ms - -[0m
+[0mGET /api/auth/me [36m304 [0m0.467 ms - -[0m
+[0mOPTIONS /api/admin/stats [32m204 [0m0.159 ms - 0[0m
+[0mOPTIONS /api/admin/stats [32m204 [0m0.093 ms - 0[0m
+[0mGET /api/admin/stats [32m200 [0m0.946 ms - 3287[0m
+[0mGET /api/admin/stats [32m200 [0m0.504 ms - 3287[0m
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[0mOPTIONS /api/admin/users [32m204 [0m0.109 ms - 0[0m
+[0mOPTIONS /api/admin/users [32m204 [0m0.075 ms - 0[0m
+[0mGET /api/admin/users [32m200 [0m1.473 ms - 3070[0m
+[0mGET /api/admin/users [32m200 [0m0.549 ms - 3070[0m
+[0mOPTIONS /api/admin/users/6a0b68e57f650531e16935bb/impersonate [32m204 [0m0.154 ms - 0[0m
+[0mPOST /api/admin/users/6a0b68e57f650531e16935bb/impersonate [32m200 [0m3.270 ms - 891[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.053 ms - 0[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.028 ms - 0[0m
+[0mGET /api/auth/me [32m200 [0m1.194 ms - 891[0m
+[0mGET /api/auth/me [32m200 [0m0.288 ms - 891[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.155 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.056 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.050 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.018 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.024 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.077 ms - 0[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.063 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.046 ms - 0[0m
+[0mGET /api/patient/summary [32m200 [0m0.646 ms - 1988[0m
+[0mGET /api/announcements/active [32m200 [0m0.300 ms - 240[0m
+[0mGET /api/patient/timeline [32m200 [0m0.353 ms - 1496[0m
+[0mGET /api/patient/summary [32m200 [0m0.249 ms - 1988[0m
+[0mGET /api/patient/timeline [32m200 [0m0.260 ms - 1496[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.348 ms - -[0m
+[0mGET /api/announcements/active [32m200 [0m0.120 ms - 240[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.251 ms - -[0m
+[0mOPTIONS /api/auth/stop-impersonating [32m204 [0m0.110 ms - 0[0m
+[0mPOST /api/auth/stop-impersonating [32m200 [0m2.203 ms - 873[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.172 ms - 0[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.510 ms - -[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.058 ms - 0[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.031 ms - 0[0m
+[0mGET /api/auth/me [32m200 [0m0.967 ms - 824[0m
+[0mGET /api/auth/me [32m200 [0m0.936 ms - 824[0m
+[0mOPTIONS /api/admin/stats [32m204 [0m0.095 ms - 0[0m
+[0mOPTIONS /api/admin/stats [32m204 [0m0.080 ms - 0[0m
+[0mGET /api/admin/stats [32m200 [0m1.016 ms - 3287[0m
+[0mGET /api/admin/stats [32m200 [0m0.748 ms - 3287[0m
+[0mOPTIONS /api/admin/users [32m204 [0m0.109 ms - 0[0m
+[0mOPTIONS /api/admin/users [32m204 [0m0.126 ms - 0[0m
+[0mGET /api/admin/users [36m304 [0m1.708 ms - -[0m
+[0mGET /api/admin/users [36m304 [0m0.789 ms - -[0m
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[0mOPTIONS /api/admin/audit?limit=200 [32m204 [0m0.216 ms - 0[0m
+[0mOPTIONS /api/admin/audit?limit=200 [32m204 [0m0.050 ms - 0[0m
+[0mGET /api/admin/audit?limit=200 [36m304 [0m1.307 ms - -[0m
+[0mGET /api/admin/audit?limit=200 [36m304 [0m0.430 ms - -[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.058 ms - 0[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.035 ms - 0[0m
+[0mGET /api/auth/me [36m304 [0m0.825 ms - -[0m
+[0mGET /api/auth/me [36m304 [0m0.416 ms - -[0m
+[0mOPTIONS /api/admin/users [32m204 [0m0.142 ms - 0[0m
+[0mOPTIONS /api/admin/users [32m204 [0m0.130 ms - 0[0m
+[0mGET /api/admin/users [36m304 [0m1.204 ms - -[0m
+[0mGET /api/admin/users [36m304 [0m0.662 ms - -[0m
+[0mOPTIONS /api/auth/logout [32m204 [0m0.121 ms - 0[0m
+[0mPOST /api/auth/logout [32m200 [0m1.323 ms - 39[0m
+[0mOPTIONS /api/auth/login [32m204 [0m0.134 ms - 0[0m
+[0mPOST /api/auth/login [32m200 [0m253.937 ms - 829[0m
+[0mOPTIONS /api/doctor/stats [32m204 [0m0.031 ms - 0[0m
+[0mOPTIONS /api/doctor/stats [32m204 [0m0.014 ms - 0[0m
+[0mGET /api/doctor/stats [32m200 [0m0.341 ms - 261[0m
+[0mGET /api/doctor/stats [32m200 [0m0.179 ms - 261[0m
+[0mOPTIONS /api/doctor/patients?page=1&limit=10 [32m204 [0m0.046 ms - 0[0m
+[0mOPTIONS /api/doctor/patients?page=1&limit=10 [32m204 [0m0.015 ms - 0[0m
+[0mGET /api/doctor/patients?page=1&limit=10 [32m200 [0m1.284 ms - 1708[0m
+[0mGET /api/doctor/patients?page=1&limit=10 [32m200 [0m0.663 ms - 1708[0m
+[0mOPTIONS /api/doctor/patients/6a0b68e57f650531e16935bb/notes [32m204 [0m0.177 ms - 0[0m
+[0mOPTIONS /api/doctor/patients/6a0b68e57f650531e16935bb/insights [32m204 [0m0.123 ms - 0[0m
+[0mOPTIONS /api/doctor/patients/6a0b68e57f650531e16935bb/treatment-plans [32m204 [0m0.041 ms - 0[0m
+[0mGET /api/doctor/patients/6a0b68e57f650531e16935bb/notes [32m200 [0m1.411 ms - 12[0m
+[0mOPTIONS /api/doctor/patients/6a0b68e57f650531e16935bb/notes [32m204 [0m0.040 ms - 0[0m
+[0mGET /api/doctor/patients/6a0b68e57f650531e16935bb/insights [32m200 [0m1.240 ms - 251[0m
+[0mGET /api/doctor/patients/6a0b68e57f650531e16935bb/treatment-plans [32m200 [0m0.914 ms - 12[0m
+[0mOPTIONS /api/doctor/patients/6a0b68e57f650531e16935bb/insights [32m204 [0m0.036 ms - 0[0m
+[0mGET /api/doctor/patients/6a0b68e57f650531e16935bb/notes [36m304 [0m0.333 ms - -[0m
+[0mOPTIONS /api/doctor/patients/6a0b68e57f650531e16935bb/treatment-plans [32m204 [0m0.029 ms - 0[0m
+[0mGET /api/doctor/patients/6a0b68e57f650531e16935bb/insights [36m304 [0m0.188 ms - -[0m
+[0mGET /api/doctor/patients/6a0b68e57f650531e16935bb/treatment-plans [36m304 [0m0.279 ms - -[0m
+[0mOPTIONS /api/doctor/stats [32m204 [0m0.081 ms - 0[0m
+[0mOPTIONS /api/doctor/stats [32m204 [0m0.078 ms - 0[0m
+[0mGET /api/doctor/stats [36m304 [0m0.544 ms - -[0m
+[0mGET /api/doctor/stats [36m304 [0m0.473 ms - -[0m
+[0mOPTIONS /api/doctor/patients?page=1&limit=10 [32m204 [0m0.070 ms - 0[0m
+[0mOPTIONS /api/doctor/patients?page=1&limit=10 [32m204 [0m0.021 ms - 0[0m
+[0mGET /api/doctor/patients?page=1&limit=10 [36m304 [0m1.015 ms - -[0m
+[0mGET /api/doctor/patients?page=1&limit=10 [36m304 [0m0.414 ms - -[0m
+[0mOPTIONS /api/doctor/patients/6a0b68e57f650531e16935bb/notes [32m204 [0m0.342 ms - 0[0m
+[0mOPTIONS /api/doctor/patients/6a0b68e57f650531e16935bb/insights [32m204 [0m0.127 ms - 0[0m
+[0mOPTIONS /api/doctor/patients/6a0b68e57f650531e16935bb/treatment-plans [32m204 [0m0.032 ms - 0[0m
+[0mOPTIONS /api/doctor/patients/6a0b68e57f650531e16935bb/notes [32m204 [0m0.029 ms - 0[0m
+[0mOPTIONS /api/doctor/patients/6a0b68e57f650531e16935bb/insights [32m204 [0m0.027 ms - 0[0m
+[0mGET /api/doctor/patients/6a0b68e57f650531e16935bb/notes [36m304 [0m0.786 ms - -[0m
+[0mGET /api/doctor/patients/6a0b68e57f650531e16935bb/insights [36m304 [0m0.524 ms - -[0m
+[0mGET /api/doctor/patients/6a0b68e57f650531e16935bb/treatment-plans [36m304 [0m0.418 ms - -[0m
+[0mGET /api/doctor/patients/6a0b68e57f650531e16935bb/notes [36m304 [0m0.315 ms - -[0m
+[0mOPTIONS /api/doctor/patients/6a0b68e57f650531e16935bb/treatment-plans [32m204 [0m0.022 ms - 0[0m
+[0mGET /api/doctor/patients/6a0b68e57f650531e16935bb/insights [36m304 [0m0.299 ms - -[0m
+[0mGET /api/doctor/patients/6a0b68e57f650531e16935bb/treatment-plans [36m304 [0m0.378 ms - -[0m
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[0mOPTIONS /api/doctor/patients/6a0b68e57f650531e16935bb/impersonate [32m204 [0m0.124 ms - 0[0m
+[0mPOST /api/doctor/patients/6a0b68e57f650531e16935bb/impersonate [32m200 [0m2.591 ms - 894[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.108 ms - 0[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.072 ms - 0[0m
+[0mGET /api/auth/me [32m200 [0m0.959 ms - 894[0m
+[0mGET /api/auth/me [32m200 [0m0.273 ms - 894[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.100 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.042 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.021 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.065 ms - 0[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.054 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.074 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.021 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.013 ms - 0[0m
+[0mGET /api/patient/summary [36m304 [0m0.526 ms - -[0m
+[0mGET /api/patient/timeline [36m304 [0m0.316 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.216 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.493 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.194 ms - -[0m
+[0mGET /api/patient/summary [36m304 [0m0.307 ms - -[0m
+[0mGET /api/patient/timeline [36m304 [0m0.206 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.162 ms - -[0m
+[0mOPTIONS /api/doctor/patients/6a0b68e57f650531e16935bb/impersonate [32m204 [0m0.112 ms - 0[0m
+[0mPOST /api/doctor/patients/6a0b68e57f650531e16935bb/impersonate [33m403 [0m1.342 ms - 75[0m
+[0mPOST /api/doctor/patients/6a0b68e57f650531e16935bb/impersonate [33m403 [0m2.197 ms - 75[0m
+[0mOPTIONS /api/doctor/patients/6a0b685e7f650531e16935b8/impersonate [32m204 [0m0.075 ms - 0[0m
+[0mPOST /api/doctor/patients/6a0b685e7f650531e16935b8/impersonate [33m403 [0m0.531 ms - 75[0m
+[0mOPTIONS /api/doctor/patients/6a0b68e57f650531e16935bb/notes [32m204 [0m0.163 ms - 0[0m
+[0mOPTIONS /api/doctor/patients/6a0b68e57f650531e16935bb/insights [32m204 [0m0.098 ms - 0[0m
+[0mOPTIONS /api/doctor/patients/6a0b68e57f650531e16935bb/treatment-plans [32m204 [0m0.081 ms - 0[0m
+[0mOPTIONS /api/doctor/patients/6a0b68e57f650531e16935bb/notes [32m204 [0m0.046 ms - 0[0m
+[0mOPTIONS /api/doctor/patients/6a0b68e57f650531e16935bb/insights [32m204 [0m0.031 ms - 0[0m
+[0mOPTIONS /api/doctor/patients/6a0b68e57f650531e16935bb/treatment-plans [32m204 [0m0.023 ms - 0[0m
+[0mGET /api/doctor/patients/6a0b68e57f650531e16935bb/notes [33m403 [0m0.766 ms - 75[0m
+[0mGET /api/doctor/patients/6a0b68e57f650531e16935bb/insights [33m403 [0m0.441 ms - 75[0m
+[0mGET /api/doctor/patients/6a0b68e57f650531e16935bb/treatment-plans [33m403 [0m0.366 ms - 75[0m
+[0mGET /api/doctor/patients/6a0b68e57f650531e16935bb/notes [33m403 [0m0.308 ms - 75[0m
+[0mGET /api/doctor/patients/6a0b68e57f650531e16935bb/insights [33m403 [0m0.379 ms - 75[0m
+[0mGET /api/doctor/patients/6a0b68e57f650531e16935bb/treatment-plans [33m403 [0m0.240 ms - 75[0m
+[0mOPTIONS /api/doctor/patients/6a0b68e57f650531e16935bb/impersonate [32m204 [0m0.111 ms - 0[0m
+[0mPOST /api/doctor/patients/6a0b68e57f650531e16935bb/impersonate [33m403 [0m1.246 ms - 75[0m
+[0mPOST /api/doctor/patients/6a0b68e57f650531e16935bb/impersonate [33m403 [0m1.421 ms - 75[0m
+[0mPOST /api/doctor/patients/6a0b68e57f650531e16935bb/impersonate [33m403 [0m1.709 ms - 75[0m
+[0mPOST /api/doctor/patients/6a0b68e57f650531e16935bb/impersonate [33m403 [0m1.341 ms - 75[0m
+[0mPOST /api/doctor/patients/6a0b68e57f650531e16935bb/impersonate [33m403 [0m1.326 ms - 75[0m
+[0mPOST /api/doctor/patients/6a0b68e57f650531e16935bb/impersonate [33m403 [0m1.600 ms - 75[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.055 ms - 0[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.026 ms - 0[0m
+[0mGET /api/auth/me [36m304 [0m0.706 ms - -[0m
+[0mGET /api/auth/me [36m304 [0m0.380 ms - -[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.050 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.020 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.014 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.011 ms - 0[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.029 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.019 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.014 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.028 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.233 ms - -[0m
+[0mGET /api/patient/summary [36m304 [0m0.484 ms - -[0m
+[0mGET /api/patient/timeline [36m304 [0m0.438 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.409 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.186 ms - -[0m
+[0mGET /api/patient/summary [36m304 [0m0.369 ms - -[0m
+[0mGET /api/patient/timeline [36m304 [0m0.309 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.236 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.336 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.132 ms - -[0m
+[0mOPTIONS /api/auth/logout [32m204 [0m0.105 ms - 0[0m
+[0mPOST /api/auth/logout [32m200 [0m0.593 ms - 39[0m
+[0mOPTIONS /api/auth/login [32m204 [0m0.137 ms - 0[0m
+[0mPOST /api/auth/login [32m200 [0m252.225 ms - 829[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.033 ms - 0[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.009 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.138 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.037 ms - -[0m
+[0mOPTIONS /api/doctor/stats [32m204 [0m0.053 ms - 0[0m
+[0mGET /api/doctor/stats [36m304 [0m0.909 ms - -[0m
+[0mOPTIONS /api/doctor/stats [32m204 [0m0.045 ms - 0[0m
+[0mGET /api/doctor/stats [36m304 [0m0.436 ms - -[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.052 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.028 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.047 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.022 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.020 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.079 ms - 0[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.025 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.019 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.373 ms - -[0m
+[0mGET /api/patient/summary [32m200 [0m0.792 ms - 1988[0m
+[0mGET /api/patient/summary [32m200 [0m0.308 ms - 1988[0m
+[0mGET /api/patient/timeline [36m304 [0m0.256 ms - -[0m
+[0mGET /api/patient/timeline [36m304 [0m0.323 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.224 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.153 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.316 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.223 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.116 ms - -[0m
+[0mOPTIONS /api/glucotwin/basal/generate [32m204 [0m0.046 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.346 ms - -[0m
+[0mOPTIONS /api/glucotwin/basal/generate [32m204 [0m0.027 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.140 ms - -[0m
+[0mPOST /api/glucotwin/basal/generate [32m200 [0m1.564 ms - 1201[0m
+[0mPOST /api/glucotwin/basal/generate [32m200 [0m0.465 ms - 1201[0m
+[0mOPTIONS /api/doctor/stats [32m204 [0m0.076 ms - 0[0m
+[0mOPTIONS /api/doctor/stats [32m204 [0m0.073 ms - 0[0m
+[0mGET /api/doctor/stats [36m304 [0m0.663 ms - -[0m
+[0mGET /api/doctor/stats [36m304 [0m0.535 ms - -[0m
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[0mOPTIONS /api/announcements/active [32m204 [0m0.058 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.022 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.085 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.055 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.073 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.051 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.047 ms - 0[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.019 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.332 ms - -[0m
+[0mGET /api/patient/summary [32m200 [0m1.061 ms - 5824[0m
+[0mGET /api/patient/timeline [32m200 [0m0.469 ms - 2258[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.158 ms - -[0m
+[0mGET /api/patient/summary [32m200 [0m0.228 ms - 5824[0m
+[0mGET /api/patient/timeline [32m200 [0m0.343 ms - 2258[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.287 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.081 ms - -[0m
+[0mOPTIONS /api/doctor/stats [32m204 [0m0.078 ms - 0[0m
+[0mOPTIONS /api/doctor/stats [32m204 [0m0.035 ms - 0[0m
+[0mGET /api/doctor/stats [36m304 [0m0.676 ms - -[0m
+[0mGET /api/doctor/stats [36m304 [0m0.431 ms - -[0m
+[0mOPTIONS /api/doctor/patients?page=1&limit=10 [32m204 [0m0.088 ms - 0[0m
+[0mOPTIONS /api/doctor/patients?page=1&limit=10 [32m204 [0m0.054 ms - 0[0m
+[0mGET /api/doctor/patients?page=1&limit=10 [36m304 [0m1.162 ms - -[0m
+[0mGET /api/doctor/patients?page=1&limit=10 [36m304 [0m0.789 ms - -[0m
+[0mOPTIONS /api/doctor/patients/6a0b68e57f650531e16935bb/impersonate [32m204 [0m0.105 ms - 0[0m
+[0mPOST /api/doctor/patients/6a0b68e57f650531e16935bb/impersonate [32m200 [0m2.129 ms - 894[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.042 ms - 0[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.015 ms - 0[0m
+[0mGET /api/auth/me [36m304 [0m0.516 ms - -[0m
+[0mGET /api/auth/me [36m304 [0m0.325 ms - -[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.052 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.029 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.077 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.050 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.045 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.044 ms - 0[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.030 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.021 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.313 ms - -[0m
+[0mGET /api/patient/timeline [32m200 [0m0.514 ms - 1496[0m
+[0mGET /api/patient/summary [32m200 [0m0.282 ms - 1988[0m
+[0mGET /api/patient/summary [32m200 [0m0.184 ms - 1988[0m
+[0mGET /api/patient/timeline [32m200 [0m0.282 ms - 1496[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.313 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.257 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.143 ms - -[0m
+[0mOPTIONS /api/auth/stop-impersonating [32m204 [0m0.091 ms - 0[0m
+[0mPOST /api/auth/stop-impersonating [32m200 [0m1.942 ms - 878[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m1.353 ms - -[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.044 ms - 0[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.033 ms - 0[0m
+[0mGET /api/auth/me [32m200 [0m0.627 ms - 829[0m
+[0mGET /api/auth/me [32m200 [0m0.335 ms - 829[0m
+[0mOPTIONS /api/doctor/stats [32m204 [0m0.128 ms - 0[0m
+[0mOPTIONS /api/doctor/stats [32m204 [0m0.034 ms - 0[0m
+[0mGET /api/doctor/stats [36m304 [0m1.140 ms - -[0m
+[0mGET /api/doctor/stats [36m304 [0m0.401 ms - -[0m
+[0mOPTIONS /api/doctor/patients?page=1&limit=10 [32m204 [0m0.063 ms - 0[0m
+[0mOPTIONS /api/doctor/patients?page=1&limit=10 [32m204 [0m0.027 ms - 0[0m
+[0mGET /api/doctor/patients?page=1&limit=10 [36m304 [0m1.501 ms - -[0m
+[0mGET /api/doctor/patients?page=1&limit=10 [36m304 [0m0.526 ms - -[0m
+[0mOPTIONS /api/doctor/patients/6a0b685e7f650531e16935b8/impersonate [32m204 [0m0.105 ms - 0[0m
+[0mPOST /api/doctor/patients/6a0b685e7f650531e16935b8/impersonate [32m200 [0m2.287 ms - 918[0m
+[0mGET /api/auth/me [32m200 [0m0.574 ms - 918[0m
+[0mGET /api/auth/me [32m200 [0m0.309 ms - 918[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.163 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.038 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.018 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.012 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.045 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.024 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.017 ms - 0[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.017 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.194 ms - -[0m
+[0mGET /api/patient/summary [32m200 [0m0.454 ms - 1988[0m
+[0mGET /api/patient/timeline [36m304 [0m0.413 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.387 ms - -[0m
+[0mGET /api/patient/summary [32m200 [0m0.219 ms - 1988[0m
+[0mGET /api/patient/timeline [36m304 [0m0.200 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.303 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.099 ms - -[0m
+[0mOPTIONS /api/auth/stop-impersonating [32m204 [0m0.143 ms - 0[0m
+[0mPOST /api/auth/stop-impersonating [32m200 [0m2.189 ms - 878[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.753 ms - -[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.133 ms - 0[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.069 ms - 0[0m
+[0mGET /api/auth/me [32m200 [0m1.040 ms - 829[0m
+[0mGET /api/auth/me [32m200 [0m0.726 ms - 829[0m
+[0mOPTIONS /api/doctor/stats [32m204 [0m0.095 ms - 0[0m
+[0mOPTIONS /api/doctor/stats [32m204 [0m0.037 ms - 0[0m
+[0mGET /api/doctor/stats [36m304 [0m0.945 ms - -[0m
+[0mGET /api/doctor/stats [36m304 [0m0.596 ms - -[0m
+[0mOPTIONS /api/doctor/patients?page=1&limit=10 [32m204 [0m0.057 ms - 0[0m
+[0mOPTIONS /api/doctor/patients?page=1&limit=10 [32m204 [0m0.035 ms - 0[0m
+[0mGET /api/doctor/patients?page=1&limit=10 [36m304 [0m0.618 ms - -[0m
+[0mGET /api/doctor/patients?page=1&limit=10 [36m304 [0m0.425 ms - -[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.055 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.033 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.034 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.016 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.014 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.069 ms - 0[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.053 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.016 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.189 ms - -[0m
+[0mGET /api/patient/summary [32m200 [0m0.527 ms - 5824[0m
+[0mGET /api/patient/summary [32m200 [0m0.313 ms - 5824[0m
+[0mGET /api/patient/timeline [32m200 [0m0.351 ms - 2258[0m
+[0mGET /api/patient/timeline [32m200 [0m0.733 ms - 2258[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.267 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.094 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.180 ms - -[0m
+[0mOPTIONS /api/doctor/stats [32m204 [0m0.186 ms - 0[0m
+[0mOPTIONS /api/doctor/stats [32m204 [0m0.052 ms - 0[0m
+[0mGET /api/doctor/stats [36m304 [0m0.661 ms - -[0m
+[0mGET /api/doctor/stats [36m304 [0m0.845 ms - -[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.068 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.029 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.020 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.013 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.056 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.057 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.044 ms - 0[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.019 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.179 ms - -[0m
+[0mGET /api/patient/summary [36m304 [0m0.500 ms - -[0m
+[0mGET /api/patient/timeline [36m304 [0m0.345 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.242 ms - -[0m
+[0mGET /api/patient/summary [36m304 [0m0.300 ms - -[0m
+[0mGET /api/patient/timeline [36m304 [0m0.295 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.250 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.118 ms - -[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.102 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.292 ms - -[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.036 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.160 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.588 ms - -[0m
+[0mOPTIONS /api/glucotwin/basal/generate [32m204 [0m0.083 ms - 0[0m
+[0mOPTIONS /api/glucotwin/basal/generate [32m204 [0m0.035 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m1.884 ms - -[0m
+[0mPOST /api/glucotwin/basal/generate [32m200 [0m1.103 ms - 1201[0m
+[0mPOST /api/glucotwin/basal/generate [32m200 [0m1.004 ms - 1201[0m
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[0mOPTIONS /api/announcements/active [32m204 [0m0.230 ms - 0[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.052 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.332 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.068 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.311 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.141 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.310 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.131 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.250 ms - -[0m
+[0mOPTIONS /api/patient/analytics [32m204 [0m0.027 ms - 0[0m
+[0mOPTIONS /api/patient/analytics [32m204 [0m0.064 ms - 0[0m
+[0mGET /api/patient/analytics [32m200 [0m0.960 ms - 7425[0m
+[0mGET /api/announcements/active [36m304 [0m0.082 ms - -[0m
+[0mGET /api/patient/analytics [32m200 [0m0.310 ms - 7425[0m
+[0mOPTIONS /api/patient/timeline?limit=50 [32m204 [0m0.057 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.222 ms - -[0m
+[0mOPTIONS /api/patient/timeline?limit=50 [32m204 [0m0.024 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.198 ms - -[0m
+[0mGET /api/patient/timeline?limit=50 [32m200 [0m0.502 ms - 3016[0m
+[0mGET /api/patient/timeline?limit=50 [32m200 [0m0.310 ms - 3016[0m
+[0mGET /api/announcements/active [36m304 [0m0.298 ms - -[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.073 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans [32m204 [0m0.027 ms - 0[0m
+[0mOPTIONS /api/patient/care-team [32m204 [0m0.025 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans [32m204 [0m0.041 ms - 0[0m
+[0mOPTIONS /api/patient/care-team [32m204 [0m0.017 ms - 0[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.331 ms - -[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.034 ms - 0[0m
+[0mGET /api/glucotwin/treatment-plans [36m304 [0m0.317 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.080 ms - -[0m
+[0mGET /api/patient/care-team [32m200 [0m0.473 ms - 702[0m
+[0mGET /api/glucotwin/treatment-plans [36m304 [0m0.393 ms - -[0m
+[0mGET /api/patient/care-team [32m200 [0m0.224 ms - 702[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.287 ms - -[0m
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[0mOPTIONS /api/doctor/stats [32m204 [0m0.119 ms - 0[0m
+[0mOPTIONS /api/doctor/stats [32m204 [0m0.037 ms - 0[0m
+[0mGET /api/doctor/stats [36m304 [0m1.102 ms - -[0m
+[0mGET /api/doctor/stats [36m304 [0m0.358 ms - -[0m
+[0mOPTIONS /api/doctor/patients?page=1&limit=10 [32m204 [0m0.053 ms - 0[0m
+[0mOPTIONS /api/doctor/patients?page=1&limit=10 [32m204 [0m0.031 ms - 0[0m
+[0mGET /api/doctor/patients?page=1&limit=10 [36m304 [0m0.954 ms - -[0m
+[0mGET /api/doctor/patients?page=1&limit=10 [36m304 [0m0.533 ms - -[0m
+[0mGET /api/doctor/stats [36m304 [0m1.746 ms - -[0m
+[0mGET /api/doctor/stats [36m304 [0m0.510 ms - -[0m
+[0mGET /api/doctor/patients?page=1&limit=10 [36m304 [0m0.672 ms - -[0m
+[0mGET /api/doctor/patients?page=1&limit=10 [36m304 [0m0.617 ms - -[0m
+[0mOPTIONS /api/auth/logout [32m204 [0m0.098 ms - 0[0m
+[0mPOST /api/auth/logout [32m200 [0m0.627 ms - 39[0m
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[0mOPTIONS /api/auth/login [32m204 [0m0.095 ms - 0[0m
+[0mPOST /api/auth/login [32m200 [0m240.325 ms - 824[0m
+[0mOPTIONS /api/admin/stats [32m204 [0m0.025 ms - 0[0m
+[0mOPTIONS /api/admin/stats [32m204 [0m0.011 ms - 0[0m
+[0mGET /api/admin/stats [32m200 [0m0.426 ms - 3287[0m
+[0mGET /api/admin/stats [32m200 [0m0.204 ms - 3287[0m
+[0mOPTIONS /api/admin/users [32m204 [0m0.049 ms - 0[0m
+[0mOPTIONS /api/admin/users [32m204 [0m0.016 ms - 0[0m
+[0mGET /api/admin/users [36m304 [0m0.682 ms - -[0m
+[0mGET /api/admin/users [36m304 [0m0.774 ms - -[0m
+[0mOPTIONS /api/admin/announcements [32m204 [0m0.112 ms - 0[0m
+[0mOPTIONS /api/admin/announcements [32m204 [0m0.032 ms - 0[0m
+[0mGET /api/admin/announcements [36m304 [0m0.877 ms - -[0m
+[0mGET /api/admin/announcements [36m304 [0m0.372 ms - -[0m
+[0mOPTIONS /api/admin/settings [32m204 [0m0.108 ms - 0[0m
+[0mOPTIONS /api/admin/settings [32m204 [0m0.061 ms - 0[0m
+[0mGET /api/admin/settings [32m200 [0m0.671 ms - 205[0m
+[0mGET /api/admin/settings [32m200 [0m0.410 ms - 205[0m
+[0mOPTIONS /api/admin/system [32m204 [0m0.100 ms - 0[0m
+[0mGET /api/health [32m200 [0m0.202 ms - 34[0m
+[0mGET /api/admin/system [32m200 [0m0.863 ms - 174[0m
+[0mOPTIONS /api/admin/system [32m204 [0m0.025 ms - 0[0m
+[0mGET /api/health [32m200 [0m0.153 ms - 34[0m
+[0mGET /api/admin/system [36m304 [0m0.443 ms - -[0m
+[0mOPTIONS /api/admin/audit?limit=200 [32m204 [0m0.061 ms - 0[0m
+[0mOPTIONS /api/admin/audit?limit=200 [32m204 [0m0.019 ms - 0[0m
+[0mGET /api/admin/audit?limit=200 [36m304 [0m0.622 ms - -[0m
+[0mGET /api/admin/audit?limit=200 [36m304 [0m0.294 ms - -[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.111 ms - 0[0m
+[0mOPTIONS /api/auth/me [32m204 [0m0.054 ms - 0[0m
+[0mGET /api/auth/me [32m200 [0m0.771 ms - 824[0m
+[0mGET /api/auth/me [32m200 [0m0.443 ms - 824[0m
+[0mGET /api/admin/system [32m200 [0m1.218 ms - 174[0m
+[0mGET /api/health [36m304 [0m0.186 ms - -[0m
+[0mGET /api/health [36m304 [0m0.123 ms - -[0m
+[0mGET /api/admin/system [32m200 [0m0.254 ms - 174[0m
+[0mOPTIONS /api/admin/stats [32m204 [0m0.092 ms - 0[0m
+[0mOPTIONS /api/admin/stats [32m204 [0m0.035 ms - 0[0m
+[0mGET /api/admin/stats [32m200 [0m0.711 ms - 3287[0m
+[0mGET /api/admin/stats [32m200 [0m0.662 ms - 3287[0m
+[0mOPTIONS /api/admin/users [32m204 [0m0.056 ms - 0[0m
+[0mOPTIONS /api/admin/users [32m204 [0m0.072 ms - 0[0m
+[0mGET /api/admin/users [36m304 [0m1.271 ms - -[0m
+[0mGET /api/admin/users [36m304 [0m0.533 ms - -[0m
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[0mOPTIONS /api/auth/logout [32m204 [0m0.108 ms - 0[0m
+[0mPOST /api/auth/logout [32m200 [0m0.904 ms - 39[0m
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[0mOPTIONS /api/auth/register [32m204 [0m0.135 ms - 0[0m
+[0mPOST /api/auth/register [32m201 [0m255.472 ms - 838[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.027 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.046 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.014 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.008 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.006 ms - 0[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.010 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.014 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.006 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.172 ms - -[0m
+[0mGET /api/patient/summary [32m200 [0m0.221 ms - 1988[0m
+[0mGET /api/patient/summary [32m200 [0m0.104 ms - 1988[0m
+[0mGET /api/patient/timeline [32m200 [0m0.102 ms - 1496[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.112 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.065 ms - -[0m
+[0mGET /api/patient/timeline [32m200 [0m0.132 ms - 1496[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.077 ms - -[0m
+[0mOPTIONS /api/patient/timeline?limit=50 [32m204 [0m0.053 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.249 ms - -[0m
+[0mOPTIONS /api/patient/timeline?limit=50 [32m204 [0m0.021 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.370 ms - -[0m
+[0mGET /api/patient/timeline?limit=50 [32m200 [0m0.687 ms - 1496[0m
+[0mGET /api/patient/timeline?limit=50 [32m200 [0m0.193 ms - 1496[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.101 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.077 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.045 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.040 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.038 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.014 ms - 0[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.010 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.024 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.197 ms - -[0m
+[0mGET /api/patient/summary [36m304 [0m0.474 ms - -[0m
+[0mGET /api/patient/summary [36m304 [0m0.302 ms - -[0m
+[0mGET /api/patient/timeline [36m304 [0m0.298 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.234 ms - -[0m
+[0mGET /api/patient/timeline [36m304 [0m0.299 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.089 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.229 ms - -[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.092 ms - 0[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.056 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.279 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.138 ms - -[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.088 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.028 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.016 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.015 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.037 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.017 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.013 ms - 0[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.042 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.271 ms - -[0m
+[0mGET /api/patient/summary [36m304 [0m0.412 ms - -[0m
+[0mGET /api/patient/summary [36m304 [0m0.313 ms - -[0m
+[0mGET /api/patient/timeline [36m304 [0m0.315 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.409 ms - -[0m
+[0mGET /api/patient/timeline [36m304 [0m0.303 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.310 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.120 ms - -[0m
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[0mOPTIONS /api/announcements/active [32m204 [0m0.086 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.032 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans [32m204 [0m0.027 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans [32m204 [0m0.025 ms - 0[0m
+[0mOPTIONS /api/patient/care-team [32m204 [0m0.020 ms - 0[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.019 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.048 ms - 0[0m
+[0mOPTIONS /api/patient/care-team [32m204 [0m0.023 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.248 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.358 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans [36m304 [0m0.171 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans [36m304 [0m0.123 ms - -[0m
+[0mGET /api/patient/care-team [36m304 [0m0.320 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.132 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.407 ms - -[0m
+[0mGET /api/patient/care-team [36m304 [0m0.214 ms - -[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.048 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.446 ms - -[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.020 ms - 0[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.475 ms - -[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.024 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.020 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.208 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.321 ms - -[0m
+[0mGET /api/patient/summary [36m304 [0m0.398 ms - -[0m
+[0mGET /api/patient/timeline [36m304 [0m0.387 ms - -[0m
+[0mGET /api/patient/summary [36m304 [0m0.277 ms - -[0m
+[0mGET /api/patient/timeline [36m304 [0m0.265 ms - -[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.146 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.076 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans [32m204 [0m0.017 ms - 0[0m
+[0mOPTIONS /api/patient/care-team [32m204 [0m0.022 ms - 0[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.019 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.037 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans [32m204 [0m0.022 ms - 0[0m
+[0mOPTIONS /api/patient/care-team [32m204 [0m0.014 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.219 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.430 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans [36m304 [0m0.331 ms - -[0m
+[0mGET /api/patient/care-team [36m304 [0m0.407 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.107 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.208 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans [36m304 [0m0.183 ms - -[0m
+[0mGET /api/patient/care-team [36m304 [0m0.183 ms - -[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.095 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.371 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.053 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.032 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.034 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.056 ms - 0[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.049 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.027 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.323 ms - -[0m
+[0mGET /api/patient/summary [36m304 [0m0.469 ms - -[0m
+[0mGET /api/patient/summary [36m304 [0m0.306 ms - -[0m
+[0mGET /api/patient/timeline [36m304 [0m0.255 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.177 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.189 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.112 ms - -[0m
+[0mGET /api/patient/timeline [36m304 [0m0.592 ms - -[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.085 ms - 0[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.028 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.200 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.208 ms - -[0m
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[0mOPTIONS /api/announcements/active [32m204 [0m0.071 ms - 0[0m
+[0mOPTIONS /api/glucotwin/basal/generate [32m204 [0m0.039 ms - 0[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.033 ms - 0[0m
+[0mOPTIONS /api/glucotwin/basal/generate [32m204 [0m0.085 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.511 ms - -[0m
+[0mPOST /api/glucotwin/basal/generate [32m200 [0m0.911 ms - 1201[0m
+[0mGET /api/announcements/active [36m304 [0m0.174 ms - -[0m
+[0mPOST /api/glucotwin/basal/generate [32m200 [0m0.501 ms - 1201[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.097 ms - 0[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.034 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.197 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.294 ms - -[0m
+[0mOPTIONS /api/glucotwin/food/recommend [32m204 [0m0.120 ms - 0[0m
+[0mPOST /api/glucotwin/food/recommend [32m200 [0m2.356 ms - 973[0m
+[0mPOST /api/glucotwin/food/recommend [32m200 [0m1.588 ms - 973[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.057 ms - 0[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.043 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.208 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.108 ms - -[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.091 ms - 0[0m
+[0mOPTIONS /api/patient/analytics [32m204 [0m0.025 ms - 0[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.036 ms - 0[0m
+[0mOPTIONS /api/patient/analytics [32m204 [0m0.041 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.179 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.208 ms - -[0m
+[0mGET /api/patient/analytics [32m200 [0m0.694 ms - 7347[0m
+[0mGET /api/patient/analytics [32m200 [0m0.344 ms - 7347[0m
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[0mOPTIONS /api/announcements/active [32m204 [0m0.112 ms - 0[0m
+[0mOPTIONS /api/patient/timeline?limit=50 [32m204 [0m0.091 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.308 ms - -[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.026 ms - 0[0m
+[0mOPTIONS /api/patient/timeline?limit=50 [32m204 [0m0.023 ms - 0[0m
+[0mGET /api/patient/timeline?limit=50 [32m200 [0m0.744 ms - 3078[0m
+[0mGET /api/announcements/active [36m304 [0m0.129 ms - -[0m
+[0mGET /api/patient/timeline?limit=50 [32m200 [0m0.273 ms - 3078[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.117 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.065 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans [32m204 [0m0.045 ms - 0[0m
+[0mOPTIONS /api/patient/care-team [32m204 [0m0.018 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans [32m204 [0m0.046 ms - 0[0m
+[0mOPTIONS /api/patient/care-team [32m204 [0m0.018 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.226 ms - -[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.028 ms - 0[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.575 ms - -[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.029 ms - 0[0m
+[0mGET /api/glucotwin/treatment-plans [36m304 [0m0.293 ms - -[0m
+[0mGET /api/patient/care-team [36m304 [0m0.442 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans [36m304 [0m0.278 ms - -[0m
+[0mGET /api/patient/care-team [36m304 [0m0.203 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.122 ms - -[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.258 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.613 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.325 ms - -[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.078 ms - 0[0m
+[0mOPTIONS /api/patient/connectors [32m204 [0m0.030 ms - 0[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.016 ms - 0[0m
+[0mOPTIONS /api/patient/connectors [32m204 [0m0.011 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.434 ms - -[0m
+[0mGET /api/patient/connectors [32m200 [0m1.015 ms - 868[0m
+[0mGET /api/announcements/active [36m304 [0m0.110 ms - -[0m
+[0mGET /api/patient/connectors [32m200 [0m0.260 ms - 868[0m
+[0mOPTIONS /api/patient/connectors/cgm/connect [32m204 [0m0.129 ms - 0[0m
+[0mPOST /api/patient/connectors/cgm/connect [32m200 [0m2.911 ms - 195[0m
+[0mGET /api/patient/connectors [32m200 [0m1.159 ms - 909[0m
+[0mOPTIONS /api/patient/connectors/cgm/disconnect [32m204 [0m0.122 ms - 0[0m
+[0mPOST /api/patient/connectors/cgm/disconnect [32m200 [0m1.801 ms - 16[0m
+[0mOPTIONS /api/patient/connectors [32m204 [0m0.052 ms - 0[0m
+[0mGET /api/patient/connectors [32m200 [0m0.384 ms - 868[0m
+[0mOPTIONS /api/patient/connectors/pump/connect [32m204 [0m0.137 ms - 0[0m
+[0mPOST /api/patient/connectors/pump/connect [32m200 [0m1.276 ms - 200[0m
+[0mGET /api/patient/connectors [32m200 [0m0.817 ms - 909[0m
+[0mOPTIONS /api/patient/connectors/pump/disconnect [32m204 [0m0.090 ms - 0[0m
+[0mPOST /api/patient/connectors/pump/disconnect [32m200 [0m0.972 ms - 16[0m
+[0mGET /api/patient/connectors [32m200 [0m0.955 ms - 868[0m
+[0mPOST /api/patient/connectors/pump/connect [32m200 [0m1.262 ms - 200[0m
+[0mOPTIONS /api/patient/connectors [32m204 [0m0.072 ms - 0[0m
+[0mGET /api/patient/connectors [32m200 [0m0.898 ms - 909[0m
+[0mPOST /api/patient/connectors/pump/disconnect [32m200 [0m1.234 ms - 16[0m
+[0mGET /api/patient/connectors [32m200 [0m1.465 ms - 868[0m
+[0mOPTIONS /api/patient/connectors/nightscout/connect [32m204 [0m0.072 ms - 0[0m
+[0mPOST /api/patient/connectors/nightscout/connect [32m200 [0m0.965 ms - 177[0m
+[0mGET /api/patient/connectors [32m200 [0m0.489 ms - 909[0m
+[0mOPTIONS /api/patient/connectors/nightscout/disconnect [32m204 [0m0.088 ms - 0[0m
+[0mPOST /api/patient/connectors/nightscout/disconnect [32m200 [0m1.006 ms - 16[0m
+[0mGET /api/patient/connectors [32m200 [0m0.891 ms - 868[0m
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[0mOPTIONS /api/announcements/active [32m204 [0m0.047 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.077 ms - 0[0m
+[0mOPTIONS /api/patient/summary [32m204 [0m0.027 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.019 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.017 ms - 0[0m
+[0mOPTIONS /api/announcements/active [32m204 [0m0.016 ms - 0[0m
+[0mOPTIONS /api/patient/timeline [32m204 [0m0.016 ms - 0[0m
+[0mOPTIONS /api/glucotwin/treatment-plans/pending [32m204 [0m0.011 ms - 0[0m
+[0mGET /api/announcements/active [36m304 [0m0.170 ms - -[0m
+[0mGET /api/patient/summary [32m200 [0m0.537 ms - 10156[0m
+[0mGET /api/patient/summary [32m200 [0m0.462 ms - 10156[0m
+[0mGET /api/patient/timeline [32m200 [0m0.442 ms - 4762[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.154 ms - -[0m
+[0mGET /api/announcements/active [36m304 [0m0.104 ms - -[0m
+[0mGET /api/patient/timeline [32m200 [0m0.431 ms - 4762[0m
+[0mGET /api/glucotwin/treatment-plans/pending [36m304 [0m0.194 ms - -[0m
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+GlucoTwin API listening on port 3000
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+GlucoTwin API listening on port 3000
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+GlucoTwin API listening on port 3000
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+GlucoTwin API listening on port 3000
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+GlucoTwin API listening on port 3000
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+GlucoTwin API listening on port 3000
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+GlucoTwin API listening on port 3000
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+(node:4555) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 exit listeners added to [Bus]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+(Use `node --trace-warnings ...` to show where the warning was created)
+/Users/yousefmohamed/Downloads/web2/backend/node_modules/express/lib/router/route.js:202
+        throw new Error(msg);
+        ^
+
+Error: Route.post() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as post] (/Users/yousefmohamed/Downloads/web2/backend/node_modules/express/lib/router/route.js:202:15)
+    at proto.<computed> [as post] (/Users/yousefmohamed/Downloads/web2/backend/node_modules/express/lib/router/index.js:510:19)
+    at Object.<anonymous> (/Users/yousefmohamed/Downloads/web2/backend/src/routes/authRoutes.js:30:8)
+    at Module._compile (node:internal/modules/cjs/loader:1829:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1969:10)
+    at Module.load (node:internal/modules/cjs/loader:1552:32)
+    at Module._load (node:internal/modules/cjs/loader:1354:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1575:12)
+    at require (node:internal/modules/helpers:191:16)
+
+Node.js v26.0.0
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+GlucoTwin API listening on port 3000
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+GlucoTwin API listening on port 3000
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+(node:4555) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 exit listeners added to [Bus]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+GlucoTwin API listening on port 3000
+[CRON] Running automated AI safety scan on all patients...
+[CRON] Scan complete. Generated 0 automated alerts.
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+/Users/yousefmohamed/Downloads/web2/backend/src/app.js:18
+app.use('/api/subscriptions/webhook', express.raw({ type: 'application/json' }));
+                                              ^
+
+TypeError: express.raw is not a function
+    at Object.<anonymous> (/Users/yousefmohamed/Downloads/web2/backend/src/app.js:18:47)
+    at Module._compile (node:internal/modules/cjs/loader:1829:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1969:10)
+    at Module.load (node:internal/modules/cjs/loader:1552:32)
+    at Module._load (node:internal/modules/cjs/loader:1354:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1575:12)
+    at require (node:internal/modules/helpers:191:16)
+    at Object.<anonymous> (/Users/yousefmohamed/Downloads/web2/backend/src/server.js:1:13)
+    at Module._compile (node:internal/modules/cjs/loader:1829:14)
+
+Node.js v26.0.0
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+(node:4555) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 exit listeners added to [Bus]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+/Users/yousefmohamed/Downloads/web2/backend/node_modules/express/lib/router/route.js:202
+        throw new Error(msg);
+        ^
+
+Error: Route.post() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as post] (/Users/yousefmohamed/Downloads/web2/backend/node_modules/express/lib/router/route.js:202:15)
+    at proto.<computed> [as post] (/Users/yousefmohamed/Downloads/web2/backend/node_modules/express/lib/router/index.js:510:19)
+    at Object.<anonymous> (/Users/yousefmohamed/Downloads/web2/backend/src/routes/subscriptionRoutes.js:23:8)
+    at Module._compile (node:internal/modules/cjs/loader:1829:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1969:10)
+    at Module.load (node:internal/modules/cjs/loader:1552:32)
+    at Module._load (node:internal/modules/cjs/loader:1354:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1575:12)
+    at require (node:internal/modules/helpers:191:16)
+
+Node.js v26.0.0
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./src/server.js`[39m
+Using in-memory GlucoTwin user store
+Could not start GlucoTwin API: port 3000 is already in use
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
