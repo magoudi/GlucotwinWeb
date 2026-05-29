@@ -404,6 +404,82 @@ async function getMyDoctorRequests(req, res, next) {
   }
 }
 
+// --- REPORTS ---
+async function getReports(req, res, next) {
+  try {
+    const Report = require('../models/Report');
+    const reports = await Report.find({ patientId: req.user._id }).sort({ createdAt: -1 });
+    res.json({ success: true, data: reports });
+  } catch (error) { next(error); }
+}
+
+async function generateReport(req, res, next) {
+  try {
+    const Report = require('../models/Report');
+    const report = await Report.create({
+      patientId: req.user._id,
+      reportType: req.body.reportType || 'weekly',
+      dateRange: req.body.dateRange || { start: new Date(Date.now() - 7*24*60*60*1000), end: new Date() },
+      fileUrl: '/mock-reports/report-' + Date.now() + '.pdf'
+    });
+    res.json({ success: true, data: report });
+  } catch (error) { next(error); }
+}
+
+// --- REMINDERS ---
+async function getReminders(req, res, next) {
+  try {
+    const Reminder = require('../models/Reminder');
+    const reminders = await Reminder.find({ patientId: req.user._id }).sort({ scheduledAt: 1 });
+    res.json({ success: true, data: reminders });
+  } catch (error) { next(error); }
+}
+
+async function createReminder(req, res, next) {
+  try {
+    const Reminder = require('../models/Reminder');
+    const reminder = await Reminder.create({
+      patientId: req.user._id,
+      ...req.body
+    });
+    res.json({ success: true, data: reminder });
+  } catch (error) { next(error); }
+}
+
+async function updateReminder(req, res, next) {
+  try {
+    const Reminder = require('../models/Reminder');
+    const reminder = await Reminder.findOneAndUpdate(
+      { _id: req.params.id, patientId: req.user._id },
+      req.body,
+      { new: true }
+    );
+    res.json({ success: true, data: reminder });
+  } catch (error) { next(error); }
+}
+
+async function deleteReminder(req, res, next) {
+  try {
+    const Reminder = require('../models/Reminder');
+    await Reminder.findOneAndDelete({ _id: req.params.id, patientId: req.user._id });
+    res.json({ success: true, data: { deleted: true } });
+  } catch (error) { next(error); }
+}
+
+// --- SETTINGS ---
+async function getSettings(req, res, next) {
+  try {
+    const settings = req.user.settings || { notifications: true, language: 'en', units: req.user.glucoseUnit || 'mg/dL' };
+    res.json({ success: true, data: settings });
+  } catch (error) { next(error); }
+}
+
+async function updateSettings(req, res, next) {
+  try {
+    res.json({ success: true, data: { ...req.body } });
+  } catch (error) { next(error); }
+}
+
 module.exports = {
   connectConnector,
   createDoctorRequest,
@@ -418,5 +494,13 @@ module.exports = {
   listAvailableDoctors,
   replyToTreatmentPlan,
   updateProfile,
+  getReports,
+  generateReport,
+  getReminders,
+  createReminder,
+  updateReminder,
+  deleteReminder,
+  getSettings,
+  updateSettings,
 };
 

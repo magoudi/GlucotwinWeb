@@ -20,21 +20,21 @@ const PLAN_ACCENTS: Record<string, { border: string; gradient: string; badge: st
   standard: {
     border: 'border-emerald-500/30',
     gradient: 'from-emerald-500 to-teal-500',
-    badge: 'border-emerald-500/30 bg-emerald-500/10 text-emerald-400',
+    badge: 'border-emerald-500/30 bg-emerald-50 text-emerald-700',
     button: 'from-emerald-500 to-teal-500 shadow-[0_8px_20px_rgba(16,185,129,0.3)]',
     glow: 'hover:shadow-[0_0_30px_rgba(16,185,129,0.15)]',
   },
   premium: {
     border: 'border-blue-500/30',
     gradient: 'from-blue-500 to-indigo-500',
-    badge: 'border-blue-500/30 bg-blue-500/10 text-blue-400',
+    badge: 'border-blue-500/30 bg-blue-50 text-blue-700',
     button: 'from-blue-500 to-indigo-500 shadow-[0_8px_20px_rgba(59,130,246,0.3)]',
     glow: 'hover:shadow-[0_0_30px_rgba(59,130,246,0.15)]',
   },
   vip: {
     border: 'border-amber-500/30',
     gradient: 'from-amber-500 to-orange-500',
-    badge: 'border-amber-500/30 bg-amber-500/10 text-amber-400',
+    badge: 'border-amber-500/30 bg-amber-50 text-amber-700',
     button: 'from-amber-500 to-orange-500 shadow-[0_8px_20px_rgba(245,158,11,0.3)]',
     glow: 'hover:shadow-[0_0_30px_rgba(245,158,11,0.15)]',
   },
@@ -73,6 +73,7 @@ export function SubscriptionPage() {
   }, [])
 
   function handleSubscribe(packageId: string) {
+    setSubscribingId(packageId)
     navigate(`/payment/${packageId}`)
   }
 
@@ -99,45 +100,45 @@ export function SubscriptionPage() {
       />
 
       {actionMsg && (
-        <div className="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 px-5 py-3 text-sm font-bold text-emerald-300 shadow-lg">
+        <div className="rounded-2xl border border-emerald-500/30 bg-emerald-50 px-5 py-3 text-sm font-bold text-emerald-700 shadow-sm">
           {actionMsg}
         </div>
       )}
 
       {error && (
-        <div className="rounded-2xl border border-red-500/30 bg-red-500/10 p-4 text-center text-sm font-bold text-red-300">
+        <div className="rounded-2xl border border-red-200 bg-red-50 p-4 text-center text-sm font-bold text-red-700">
           {error}
         </div>
       )}
 
       {/* Current Subscription Status */}
       {mySub && mySub.subscriptionStatus !== 'none' && (
-        <section className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#0B1120]/40 p-6 shadow-[0_18px_46px_rgba(0,0,0,0.3)] backdrop-blur-2xl">
+        <section className="relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-6 shadow-md">
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/[0.02] to-transparent" />
           <div className="relative flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <h3 className="text-lg font-extrabold text-white">Current Subscription</h3>
+              <h3 className="text-lg font-extrabold text-gray-900">Current Subscription</h3>
               <div className="mt-2 flex flex-wrap gap-3">
                 <span className={`inline-flex rounded-lg border px-2.5 py-1 text-xs font-extrabold capitalize ${
-                  mySub.subscriptionStatus === 'active' ? 'border-emerald-500/30 bg-emerald-500/15 text-emerald-400' :
-                  mySub.subscriptionStatus === 'cancelled' ? 'border-red-500/30 bg-red-500/15 text-red-400' :
-                  'border-slate-500/30 bg-slate-500/15 text-slate-400'
+                  mySub.subscriptionStatus === 'active' ? 'border-emerald-200 bg-emerald-50 text-emerald-700' :
+                  mySub.subscriptionStatus === 'cancelled' ? 'border-red-200 bg-red-50 text-red-700' :
+                  'border-slate-200 bg-slate-50 text-slate-600'
                 }`}>
                   {mySub.subscriptionStatus}
                 </span>
                 {mySub.subscriptionPlan && (
-                  <span className="inline-flex rounded-lg border border-white/10 bg-white/5 px-2.5 py-1 text-xs font-extrabold capitalize text-white">
+                  <span className="inline-flex rounded-lg border border-gray-200 bg-gray-50 px-2.5 py-1 text-xs font-extrabold capitalize text-gray-900">
                     {mySub.subscriptionPlan} Plan
                   </span>
                 )}
                 {mySub.subscriptionBillingPeriod && (
-                  <span className="inline-flex rounded-lg border border-white/10 bg-white/5 px-2.5 py-1 text-xs font-bold text-slate-400">
+                  <span className="inline-flex rounded-lg border border-gray-200 bg-gray-50 px-2.5 py-1 text-xs font-bold text-slate-500">
                     {mySub.subscriptionBillingPeriod === 'six_months' ? '6 Months' : mySub.subscriptionBillingPeriod}
                   </span>
                 )}
               </div>
               {mySub.subscriptionEndDate && (
-                <p className="mt-2 text-sm font-bold text-slate-400">
+                <p className="mt-2 text-sm font-bold text-slate-500">
                   {mySub.subscriptionStatus === 'active' ? 'Renews' : 'Expired'}: {new Date(mySub.subscriptionEndDate).toLocaleDateString()}
                 </p>
               )}
@@ -147,7 +148,7 @@ export function SubscriptionPage() {
                 type="button"
                 disabled={cancelling}
                 onClick={handleCancel}
-                className="rounded-xl border border-red-500/20 bg-red-500/10 px-5 py-2.5 text-sm font-extrabold text-red-400 transition-colors hover:bg-red-500/20 disabled:opacity-50"
+                className="rounded-xl border border-red-200 bg-red-50 px-5 py-2.5 text-sm font-extrabold text-red-600 transition-colors hover:bg-red-100 disabled:opacity-50"
               >
                 {cancelling ? 'Cancelling...' : 'Cancel Subscription'}
               </button>
@@ -164,7 +165,7 @@ export function SubscriptionPage() {
         <>
           {/* Billing Period Toggle */}
           <div className="flex justify-center">
-            <div className="inline-flex rounded-2xl border border-white/10 bg-[#0B1120]/60 p-1.5 backdrop-blur-xl">
+            <div className="inline-flex rounded-2xl border border-gray-200 bg-gray-50 p-1.5 shadow-sm">
               {BILLING_OPTIONS.map((opt) => (
                 <button
                   key={opt.key}
@@ -173,7 +174,7 @@ export function SubscriptionPage() {
                   className={`rounded-xl px-5 py-2.5 text-sm font-extrabold transition-all duration-200 ${
                     billingPeriod === opt.key
                       ? 'bg-gradient-to-r from-cyan-500 to-emerald-500 text-white shadow-md'
-                      : 'text-slate-400 hover:text-white'
+                      : 'text-slate-500 hover:text-gray-900'
                   }`}
                 >
                   {opt.label}
@@ -193,7 +194,7 @@ export function SubscriptionPage() {
               return (
                 <div
                   key={plan.plan}
-                  className={`relative overflow-hidden rounded-3xl border ${accent.border} bg-[#0B1120]/40 p-7 shadow-[0_18px_46px_rgba(0,0,0,0.3)] backdrop-blur-2xl transition-all duration-300 ${accent.glow} ${
+                  className={`relative overflow-hidden rounded-3xl border ${accent.border} bg-white p-7 shadow-md transition-all duration-300 ${accent.glow} ${
                     plan.plan === 'premium' ? 'lg:scale-105 lg:z-10' : ''
                   }`}
                 >
@@ -203,29 +204,29 @@ export function SubscriptionPage() {
                   <div className="relative">
                     {/* Badge */}
                     {plan.plan === 'premium' && (
-                      <div className="mb-4 inline-flex rounded-full border border-blue-500/30 bg-blue-500/10 px-3 py-1 text-xs font-extrabold text-blue-400">
+                      <div className="mb-4 inline-flex rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-extrabold text-blue-700">
                         Most Popular
                       </div>
                     )}
                     {plan.plan === 'vip' && (
-                      <div className="mb-4 inline-flex rounded-full border border-amber-500/30 bg-amber-500/10 px-3 py-1 text-xs font-extrabold text-amber-400">
+                      <div className="mb-4 inline-flex rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-extrabold text-amber-700">
                         Best Value
                       </div>
                     )}
 
                     {/* Plan Name & Description */}
-                    <h2 className="text-2xl font-extrabold text-white">{plan.name}</h2>
-                    <p className="mt-2 text-sm font-bold text-slate-400 leading-relaxed">{plan.description}</p>
+                    <h2 className="text-2xl font-extrabold text-gray-900">{plan.name}</h2>
+                    <p className="mt-2 text-sm font-bold text-slate-500 leading-relaxed">{plan.description}</p>
 
                     {/* Price */}
                     {price && (
                       <div className="mt-6 flex items-baseline gap-1">
                         {price.displayAmount === 0 ? (
-                          <span className="text-4xl font-extrabold text-white">Free</span>
+                          <span className="text-4xl font-extrabold text-gray-900">Free</span>
                         ) : (
                           <>
-                            <span className="text-4xl font-extrabold text-white">{price.displayAmount}</span>
-                            <span className="text-lg font-bold text-slate-400">EGP</span>
+                            <span className="text-4xl font-extrabold text-gray-900">{price.displayAmount}</span>
+                            <span className="text-lg font-bold text-slate-500">EGP</span>
                             <span className="ml-1 text-sm font-bold text-slate-500">/ {price.label.toLowerCase()}</span>
                           </>
                         )}
@@ -235,8 +236,8 @@ export function SubscriptionPage() {
                     {/* Features */}
                     <ul className="mt-6 space-y-3">
                       {plan.features.map((feat, i) => (
-                        <li key={i} className="flex items-start gap-2.5 text-sm font-bold text-slate-300">
-                          <svg className={`mt-0.5 size-4 shrink-0 ${plan.plan === 'standard' ? 'text-emerald-400' : plan.plan === 'premium' ? 'text-blue-400' : 'text-amber-400'}`} fill="currentColor" viewBox="0 0 20 20">
+                        <li key={i} className="flex items-start gap-2.5 text-sm font-bold text-slate-600">
+                          <svg className={`mt-0.5 size-4 shrink-0 ${plan.plan === 'standard' ? 'text-emerald-600' : plan.plan === 'premium' ? 'text-blue-600' : 'text-amber-600'}`} fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                           </svg>
                           {feat}
@@ -247,7 +248,7 @@ export function SubscriptionPage() {
                     {/* Subscribe Button */}
                     <div className="mt-8">
                       {isCurrentPlan ? (
-                        <div className="flex items-center justify-center rounded-xl border border-emerald-500/30 bg-emerald-500/10 py-3 text-sm font-extrabold text-emerald-400">
+                        <div className="flex items-center justify-center rounded-xl border border-emerald-200 bg-emerald-50 py-3 text-sm font-extrabold text-emerald-700">
                           ✓ Current Plan
                         </div>
                       ) : (

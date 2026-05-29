@@ -29,7 +29,7 @@ export function DoctorOverviewPage() {
   if (error || !stats) {
     return (
       <DoctorLayout>
-        <div className="rounded-2xl border border-red-500/30 bg-red-500/10 p-6 text-center text-red-300">
+        <div className="rounded-2xl border border-red-200 bg-red-50 p-6 text-center text-red-700">
           {error || 'Failed to load clinic stats'}
         </div>
       </DoctorLayout>
@@ -44,16 +44,16 @@ export function DoctorOverviewPage() {
 
   return (
     <DoctorLayout>
-      <header className="relative mb-6 overflow-hidden rounded-3xl border border-white/10 bg-[#0B1120]/40 px-5 py-5 shadow-[0_18px_48px_rgba(0,0,0,0.4)] backdrop-blur-3xl sm:px-7 xl:px-8 xl:py-7">
+      <header className="relative mb-6 overflow-hidden rounded-3xl border border-gray-200 bg-white px-5 py-5 shadow-md sm:px-7 xl:px-8 xl:py-7">
         <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-cyan-500 via-blue-400 to-indigo-600" />
         <div className="relative">
-          <div className="mb-4 inline-flex rounded-full border border-cyan-500/30 bg-cyan-500/10 px-3 py-1.5 text-sm font-extrabold text-cyan-400">
+          <div className="mb-4 inline-flex rounded-full border border-cyan-200 bg-cyan-50 px-3 py-1.5 text-sm font-extrabold text-cyan-700">
             Clinical Panel
           </div>
-          <h1 className="text-[clamp(2rem,3.2vw,3.75rem)] leading-none font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-400">
+          <h1 className="text-[clamp(2rem,3.2vw,3.75rem)] leading-none font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-gray-50 to-gray-600">
             Clinic Overview
           </h1>
-          <p className="mt-4 text-[clamp(1rem,1.25vw,1.25rem)] leading-7 font-bold text-slate-300">
+          <p className="mt-4 text-[clamp(1rem,1.25vw,1.25rem)] leading-7 font-bold text-slate-600">
             High-level metrics and alerts for your active patient panel.
           </p>
         </div>
@@ -72,25 +72,25 @@ export function DoctorOverviewPage() {
       </div>
 
       <DashboardPanel className="mt-8">
-        <h2 className="mb-6 text-lg font-extrabold text-white flex items-center gap-2">
+        <h2 className="mb-6 text-lg font-extrabold text-gray-900 flex items-center gap-2">
           <svg className="size-5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
           </svg>
           Recent Clinical Alerts
         </h2>
         {stats.recentAlerts.length === 0 ? (
-          <div className="text-center py-8 text-slate-400 font-bold">No active alerts at this time.</div>
+          <div className="text-center py-8 text-slate-500 font-bold">No active alerts at this time.</div>
         ) : (
           <div className="space-y-4">
             {stats.recentAlerts.map((alert, idx) => (
-              <div key={idx} className="flex items-center justify-between rounded-xl border border-white/5 bg-white/[0.02] p-4 transition-colors hover:bg-white/5">
+              <div key={idx} className="flex items-center justify-between rounded-xl border border-gray-200 bg-gray-50 p-4 transition-colors hover:bg-gray-100">
                 <div className="flex items-center gap-4">
-                  <div className="flex size-10 items-center justify-center rounded-lg bg-amber-500/10 text-amber-400 border border-amber-500/20 font-bold">
+                  <div className="flex size-10 items-center justify-center rounded-lg bg-amber-50 text-amber-600 border border-amber-200 font-bold">
                     !
                   </div>
                   <div>
-                    <div className="font-extrabold text-white">{alert.type}</div>
-                    <div className="text-xs font-bold text-slate-400">Patient: {alert.patient}</div>
+                    <div className="font-extrabold text-gray-900">{alert.type}</div>
+                    <div className="text-xs font-bold text-slate-500">Patient: {alert.patient}</div>
                   </div>
                 </div>
                 <div className="text-xs font-bold text-slate-500">{alert.time}</div>

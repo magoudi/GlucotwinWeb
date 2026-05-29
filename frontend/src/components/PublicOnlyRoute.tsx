@@ -6,7 +6,7 @@ export function PublicOnlyRoute() {
   const isBootstrapping = useIsBootstrapping()
 
   if (isBootstrapping) {
-    return <div className="flex min-h-screen items-center justify-center text-white font-bold">Loading...</div>
+    return <div className="flex min-h-screen items-center justify-center text-gray-900 font-bold">Loading...</div>
   }
 
   if (account) {

@@ -141,7 +141,7 @@ export async function createAccount(input: {
   fullName: string
   email: string
   password: string
-  role: 'patient' | 'doctor'
+  role: 'patient' | 'doctor' | 'researcher'
   diabetesType?: string
   managementType?: string
   glucoseUnit?: string

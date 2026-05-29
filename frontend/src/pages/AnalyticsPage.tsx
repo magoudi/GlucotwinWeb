@@ -20,11 +20,11 @@ export function AnalyticsPage() {
       <PrototypeNotice>{data.disclaimer}</PrototypeNotice>
       <div className="grid gap-6 2xl:grid-cols-[1.1fr_0.9fr]">
         <DashboardPanel>
-          <h2 className="text-[30px] font-extrabold text-white">Glucose trends</h2>
+          <h2 className="text-[26px] font-extrabold text-slate-900">Glucose trends</h2>
           <MiniLineChart data={data.glucoseTrends} height="mt-6 h-[300px]" />
         </DashboardPanel>
         <DashboardPanel>
-          <h2 className="text-[30px] font-extrabold text-white">Time in range</h2>
+          <h2 className="text-[26px] font-extrabold text-slate-900">Time in range</h2>
           <BarChart data={data.timeInRange} suffix="%" height="mt-6 h-[300px]" />
         </DashboardPanel>
       </div>
@@ -42,12 +42,13 @@ export function AnalyticsPage() {
         {data.events.map((event: { label: string; value: string; detail: string }) => <AppMetricCard key={event.label} label={event.label} value={event.value} detail={event.detail} />)}
       </div>
       <div className="grid gap-6 xl:grid-cols-2 2xl:grid-cols-3">
-        <DashboardPanel><h2 className="text-[26px] font-extrabold text-white">Meal impact</h2><BarChart data={data.mealImpact} suffix=" mg/dL" height="mt-5 h-[240px]" /></DashboardPanel>
-        <DashboardPanel><h2 className="text-[26px] font-extrabold text-white">Bolus history</h2><BarChart data={data.bolusHistory} suffix=" U" height="mt-5 h-[240px]" /></DashboardPanel>
-        <DashboardPanel><h2 className="text-[26px] font-extrabold text-white">Basal history</h2><BarChart data={data.basalHistory} suffix=" U/h" height="mt-5 h-[240px]" /></DashboardPanel>
-        <DashboardPanel><h2 className="text-[26px] font-extrabold text-white">Activity effect</h2><BarChart data={data.activityEffect} suffix=" mg/dL" height="mt-5 h-[240px]" /></DashboardPanel>
-        <DashboardPanel><h2 className="text-[26px] font-extrabold text-white">Sleep effect</h2><BarChart data={data.sleepEffect} suffix=" mg/dL" height="mt-5 h-[240px]" /></DashboardPanel>
+        <DashboardPanel><h2 className="text-[22px] font-extrabold text-slate-900">Meal impact</h2><BarChart data={data.mealImpact} suffix=" mg/dL" height="mt-5 h-[240px]" /></DashboardPanel>
+        <DashboardPanel><h2 className="text-[22px] font-extrabold text-slate-900">Bolus history</h2><BarChart data={data.bolusHistory} suffix=" U" height="mt-5 h-[240px]" /></DashboardPanel>
+        <DashboardPanel><h2 className="text-[22px] font-extrabold text-slate-900">Basal history</h2><BarChart data={data.basalHistory} suffix=" U/h" height="mt-5 h-[240px]" /></DashboardPanel>
+        <DashboardPanel><h2 className="text-[22px] font-extrabold text-slate-900">Activity effect</h2><BarChart data={data.activityEffect} suffix=" mg/dL" height="mt-5 h-[240px]" /></DashboardPanel>
+        <DashboardPanel><h2 className="text-[22px] font-extrabold text-slate-900">Sleep effect</h2><BarChart data={data.sleepEffect} suffix=" mg/dL" height="mt-5 h-[240px]" /></DashboardPanel>
       </div>
     </AppLayout>
   )
 }
+

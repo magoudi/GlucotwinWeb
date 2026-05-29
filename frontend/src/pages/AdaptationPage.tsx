@@ -21,14 +21,14 @@ export function AdaptationPage() {
       <DashboardPanel>
         <div className="flex flex-wrap items-center justify-between gap-5">
           <div>
-            <h2 className="text-[30px] font-extrabold text-white">{data.daysCompleted} of {data.daysTotal} days completed</h2>
-            <p className="mt-3 text-[18px] font-bold text-slate-300">{data.personalizationStatus}</p>
+            <h2 className="text-[26px] font-extrabold text-slate-900">{data.daysCompleted} of {data.daysTotal} days completed</h2>
+            <p className="mt-1.5 text-[15px] font-semibold text-[#2455e8]">{data.personalizationStatus}</p>
           </div>
           <StatusBadge status="Adaptation" />
         </div>
         <div className="mt-6">
           <ProgressBar value={data.progress} />
-          <p className="mt-3 text-[16px] font-bold text-slate-400">{data.progress}% adaptation progress</p>
+          <p className="mt-2.5 text-[14px] font-bold text-slate-500">{data.progress}% adaptation progress</p>
         </div>
       </DashboardPanel>
 
@@ -38,30 +38,30 @@ export function AdaptationPage() {
 
       <div className="grid gap-6 2xl:grid-cols-[0.8fr_1.3fr]">
         <DashboardPanel>
-          <h2 className="text-[30px] font-extrabold text-white">Missing data warnings</h2>
+          <h2 className="text-[26px] font-extrabold text-slate-900">Missing data warnings</h2>
           <div className="mt-6 space-y-4">
             {data.warnings.map((warning) => (
-              <div key={warning} className="rounded-xl border border-amber-500/30 bg-amber-500/10 p-4 text-[18px] font-bold text-amber-200 backdrop-blur-sm">{warning}</div>
+              <div key={warning} className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-[15px] font-semibold text-amber-800">{warning}</div>
             ))}
           </div>
         </DashboardPanel>
         <DashboardPanel>
-          <h2 className="text-[30px] font-extrabold text-white">Data timeline</h2>
+          <h2 className="text-[26px] font-extrabold text-slate-900">Data timeline</h2>
           <div className="mt-6 overflow-x-auto">
-            <table className="w-full min-w-[760px] border-separate border-spacing-y-3 text-left">
-              <thead className="text-sm font-extrabold uppercase text-slate-400">
-                <tr><th>Day</th><th>CGM</th><th>Insulin</th><th>Meals</th><th>Activity</th><th>Sleep</th><th>Status</th></tr>
+            <table className="w-full min-w-[760px] border-separate border-spacing-y-2 text-left">
+              <thead className="text-xs font-bold uppercase text-slate-500 tracking-wider">
+                <tr><th className="pb-2 pl-4">Day</th><th className="pb-2">CGM</th><th className="pb-2">Insulin</th><th className="pb-2">Meals</th><th className="pb-2">Activity</th><th className="pb-2">Sleep</th><th className="pb-2">Status</th></tr>
               </thead>
               <tbody>
                 {data.timeline.map((day) => (
-                  <tr key={day.day} className="bg-white/5 text-[17px] font-medium text-slate-300 transition-colors hover:bg-white/10">
-                    <td className="rounded-l-lg px-4 py-4 font-bold text-white">Day {day.day}</td>
-                    <td>{day.glucose} readings</td>
-                    <td>{day.insulin} events</td>
-                    <td>{day.meals}</td>
-                    <td>{day.activity} min</td>
-                    <td>{day.sleep} h</td>
-                    <td className="rounded-r-lg pr-4"><StatusBadge status={day.status === 'Complete' ? 'Safe' : 'Caution'} /></td>
+                  <tr key={day.day} className="bg-slate-50/50 border border-slate-100 rounded-xl text-[14px] font-medium text-slate-700 transition-colors hover:bg-slate-100/60">
+                    <td className="rounded-l-xl px-4 py-3 font-extrabold text-slate-900">Day {day.day}</td>
+                    <td className="py-3">{day.glucose} readings</td>
+                    <td className="py-3">{day.insulin} events</td>
+                    <td className="py-3">{day.meals}</td>
+                    <td className="py-3">{day.activity} min</td>
+                    <td className="py-3">{day.sleep} h</td>
+                    <td className="rounded-r-xl pr-4 py-3"><StatusBadge status={day.status === 'Complete' ? 'Safe' : 'Caution'} /></td>
                   </tr>
                 ))}
               </tbody>
@@ -69,6 +69,7 @@ export function AdaptationPage() {
           </div>
         </DashboardPanel>
       </div>
+
     </AppLayout>
   )
 }

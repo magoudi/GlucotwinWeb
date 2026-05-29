@@ -2,11 +2,16 @@ const request = require('supertest');
 const app = require('../src/app');
 const userStore = require('../src/services/userStore');
 const mongoose = require('mongoose');
+const connectDB = require('../src/config/db');
 
 describe('Auth Routes (Password Recovery)', () => {
   let mockUserId;
 
   beforeAll(async () => {
+    await connectDB();
+    const User = require('../src/models/User');
+    await User.deleteMany({ email: 'testrecovery@glucotwin.com' });
+
     // Clear and set up a mock user for the test
     // Assuming an in-memory test DB or a mocked store
     const user = await userStore.createUser({
@@ -19,7 +24,7 @@ describe('Auth Routes (Password Recovery)', () => {
   });
 
   afterAll(async () => {
-    // Cleanup mock user if needed (in memory drops naturally, but just in case)
+    // rely on forceExit
   });
 
   describe('POST /api/auth/password-reset/request-code', () => {

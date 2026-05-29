@@ -3,6 +3,7 @@ const { useInMemoryDb } = require('../config/env');
 const AuditEntry = require('../models/AuditEntry');
 
 const AUDIT_LOG_SECRET = process.env.AUDIT_LOG_SECRET || 'fallback-secret-for-development';
+const GENESIS_HASH = 'GENESIS';
 
 // Fallback in-memory array
 const entries = [];
@@ -13,21 +14,29 @@ function buildCanonicalPayload(data) {
   return JSON.stringify(data, Object.keys(data).sort());
 }
 
+function normalizeAuditHash(value) {
+  return typeof value === 'string' && value.trim() ? value : GENESIS_HASH;
+}
+
 function calculateAuditHash(payload, previousHash) {
   const hmac = crypto.createHmac('sha256', AUDIT_LOG_SECRET);
-  hmac.update(payload);
-  hmac.update(previousHash);
+  hmac.update(typeof payload === 'string' ? payload : '');
+  hmac.update(normalizeAuditHash(previousHash));
   return hmac.digest('hex');
 }
 
 async function getLatestAuditHash() {
   if (useInMemoryDb) {
-    if (entries.length === 0) return 'GENESIS';
-    return entries[0].recordHash;
+    if (entries.length === 0) return GENESIS_HASH;
+    return normalizeAuditHash(entries[0].recordHash);
   }
 
-  const latest = await AuditEntry.findOne().sort({ createdAt: -1 });
-  return latest ? latest.recordHash : 'GENESIS';
+  // Older databases may still contain legacy rows from before the hashed chain
+  // fields existed. Skip those rows so new audit writes can proceed safely.
+  const latest = await AuditEntry.findOne({
+    recordHash: { $type: 'string', $ne: '' },
+  }).sort({ createdAt: -1 });
+  return latest ? normalizeAuditHash(latest.recordHash) : GENESIS_HASH;
 }
 
 async function createAuditEntry(data) {
@@ -95,7 +104,7 @@ async function log(actorId, action, targetId, details = '') {
 async function verifyAuditChain() {
   if (useInMemoryDb) {
     // Basic verification for in-memory
-    let expectedPrevHash = 'GENESIS';
+    let expectedPrevHash = GENESIS_HASH;
     // entries are prepended (unshift), so [0] is latest, [last] is earliest.
     // To verify we need to go from earliest to latest.
     const chronological = [...entries].reverse();
@@ -121,10 +130,10 @@ async function verifyAuditChain() {
   // MongoDB Verification
   const logs = await AuditEntry.find().sort({ createdAt: 1 }); // Oldest first
   
-  let expectedPrevHash = 'GENESIS';
+  let expectedPrevHash = GENESIS_HASH;
   let checkedEntries = 0;
 
-  for (const entry of logs) {
+  for (const entry of logs.filter((candidate) => candidate.recordHash && candidate.previousHash && candidate.canonicalPayload)) {
     if (entry.previousHash !== expectedPrevHash) {
       return { valid: false, checkedEntries, brokenAt: entry._id.toString() };
     }

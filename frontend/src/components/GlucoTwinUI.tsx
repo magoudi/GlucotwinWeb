@@ -17,18 +17,18 @@ import { type SafetyStatus } from '../data/mockPatientData'
 type BadgeTone = SafetyStatus | 'Adaptation' | 'Fine-tuning' | 'Active' | 'Mock' | 'Prototype' | 'Data' | 'Simulation only' | 'Connected to MongoDB'
 
 const badgeStyles: Record<string, string> = {
-  Safe: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',
-  Caution: 'bg-amber-500/10 text-amber-400 border-amber-500/20',
-  Unsafe: 'bg-rose-500/10 text-rose-400 border-rose-500/20',
-  'Needs More Data': 'bg-indigo-500/10 text-indigo-400 border-indigo-500/20',
-  Adaptation: 'bg-indigo-500/10 text-indigo-400 border-indigo-500/20',
-  'Fine-tuning': 'bg-amber-500/10 text-amber-400 border-amber-500/20',
-  Active: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',
-  Mock: 'bg-white/5 text-slate-300 border-white/10',
-  Prototype: 'bg-indigo-500/10 text-indigo-400 border-indigo-500/20',
-  'Data': 'bg-white/5 text-slate-300 border-white/10',
-  'Simulation only': 'bg-amber-500/10 text-amber-400 border-amber-500/20',
-  'Connected to MongoDB': 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',
+  Safe: 'bg-emerald-50 text-emerald-850 border-emerald-200/60',
+  Caution: 'bg-amber-50 text-amber-850 border-amber-200/60',
+  Unsafe: 'bg-rose-50 text-rose-850 border-rose-200/60',
+  'Needs More Data': 'bg-[#e8eeff] text-[#2455e8] border-[#2455e8]/20',
+  Adaptation: 'bg-[#e8eeff] text-[#2455e8] border-[#2455e8]/20',
+  'Fine-tuning': 'bg-amber-50 text-amber-850 border-amber-200/60',
+  Active: 'bg-emerald-50 text-emerald-850 border-emerald-200/60',
+  Mock: 'bg-black/5 text-[#666666] border-black/10',
+  Prototype: 'bg-[#e8eeff] text-[#2455e8] border-[#2455e8]/20',
+  'Data': 'bg-black/5 text-[#666666] border-black/10',
+  'Simulation only': 'bg-amber-50 text-amber-850 border-amber-200/60',
+  'Connected to MongoDB': 'bg-emerald-50 text-emerald-850 border-emerald-200/60',
 }
 
 export function StatusBadge({ status }: { status: BadgeTone | string }) {
@@ -41,8 +41,8 @@ export function StatusBadge({ status }: { status: BadgeTone | string }) {
 
 export function PrototypeNotice({ children }: { children?: ReactNode }) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-[16px] font-bold leading-6 text-slate-300 backdrop-blur shadow-[0_12px_30px_rgba(0,0,0,0.2)]">
-      <span className="text-white">Simulation only.</span> {children ?? 'This prototype uses clinical data and is not for real medical use.'}
+    <div className="rounded-2xl border border-black/8 bg-white px-5 py-4 text-[16px] font-bold leading-6 text-[#666666] shadow-sm">
+      <span className="text-[#111111] font-extrabold">Simulation only.</span> {children ?? 'This prototype uses clinical data and is not for real medical use.'}
     </div>
   )
 }
@@ -81,10 +81,10 @@ export function MiniLineChart({ data, height = 'h-64', targetRange = [70, 180], 
   const CustomTooltip = ({ active, payload }: any) => {
     if (active && payload && payload.length) {
       return (
-        <div className="rounded-xl border border-white/10 bg-[#0B1120]/90 px-3 py-2 text-right backdrop-blur-md shadow-xl">
-          <p className="text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Reading</p>
-          <p className="text-base font-extrabold text-white">{payload[0].value} {unit}</p>
-          {payload[0].payload.label && <p className="text-xs font-bold text-slate-400">{payload[0].payload.label}</p>}
+        <div className="rounded-xl border border-black/8 bg-white px-3 py-2 text-right shadow-md">
+          <p className="text-[10px] font-extrabold uppercase tracking-wider text-[#666666]">Reading</p>
+          <p className="text-base font-extrabold text-[#111111]">{payload[0].value} {unit}</p>
+          {payload[0].payload.label && <p className="text-xs font-bold text-[#666666]">{payload[0].payload.label}</p>}
         </div>
       )
     }
@@ -92,45 +92,45 @@ export function MiniLineChart({ data, height = 'h-64', targetRange = [70, 180], 
   }
 
   return (
-    <div className={`relative flex flex-col rounded-2xl border border-white/10 bg-[#0B1120]/40 backdrop-blur-sm p-4 ${height}`}>
-      <div className="absolute left-4 top-4 text-xs font-extrabold text-slate-500 z-10">{unit}</div>
+    <div className={`relative flex flex-col rounded-2xl border border-black/8 bg-white p-4 ${height} shadow-sm`}>
+      <div className="absolute left-4 top-4 text-xs font-extrabold text-[#666666] z-10">{unit}</div>
       <div className="relative flex-1 mt-6 h-full w-full">
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart data={realisticData} margin={{ top: 10, right: 0, left: -20, bottom: 0 }}>
             <defs>
               <linearGradient id="colorValue" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#25c2a0" stopOpacity={0.3} />
-                <stop offset="95%" stopColor="#25c2a0" stopOpacity={0} />
+                <stop offset="5%" stopColor="#2455e8" stopOpacity={0.2} />
+                <stop offset="95%" stopColor="#2455e8" stopOpacity={0} />
               </linearGradient>
             </defs>
             <YAxis 
               domain={[min, max]} 
               axisLine={false} 
               tickLine={false} 
-              tick={{ fill: '#64748b', fontSize: 10, fontWeight: 700 }}
+              tick={{ fill: '#666666', fontSize: 10, fontWeight: 700 }}
               width={35}
             />
-            <Tooltip content={<CustomTooltip />} cursor={{ stroke: '#475569', strokeWidth: 1, strokeDasharray: '4 4' }} />
+            <Tooltip content={<CustomTooltip />} cursor={{ stroke: '#999999', strokeWidth: 1, strokeDasharray: '4 4' }} />
             
-            <ReferenceArea y1={targetRange[0]} y2={targetRange[1]} fill="rgba(37,194,160,0.06)" />
-            <ReferenceLine y={targetRange[1]} stroke="rgba(37,194,160,0.3)" strokeDasharray="4 4" />
-            <ReferenceLine y={targetRange[0]} stroke="rgba(37,194,160,0.3)" strokeDasharray="4 4" />
+            <ReferenceArea y1={targetRange[0]} y2={targetRange[1]} fill="rgba(37,194,160,0.02)" />
+            <ReferenceLine y={targetRange[1]} stroke="rgba(37,194,160,0.15)" strokeDasharray="4 4" />
+            <ReferenceLine y={targetRange[0]} stroke="rgba(37,194,160,0.15)" strokeDasharray="4 4" />
 
             <Area 
               type="monotone" 
               dataKey="value" 
-              stroke="#25c2a0" 
+              stroke="#2455e8" 
               strokeWidth={3} 
               fillOpacity={1} 
               fill="url(#colorValue)" 
-              activeDot={{ r: 6, fill: '#0B1120', stroke: '#25c2a0', strokeWidth: 2 }}
+              activeDot={{ r: 6, fill: '#ffffff', stroke: '#2455e8', strokeWidth: 2 }}
               isAnimationActive={true}
               animationDuration={1500}
             />
           </AreaChart>
         </ResponsiveContainer>
       </div>
-      <div className="mt-2 flex justify-between px-8 text-[10px] font-extrabold text-slate-500 uppercase tracking-wider">
+      <div className="mt-2 flex justify-between px-8 text-[10px] font-extrabold text-[#666666] uppercase tracking-wider">
         {data.map((point) => <span key={point.label}>{point.label}</span>)}
       </div>
     </div>
@@ -143,10 +143,10 @@ export function BarChart({ data, suffix = '', height = 'h-56' }: { data: Array<{
   const CustomTooltip = ({ active, payload }: any) => {
     if (active && payload && payload.length) {
       return (
-        <div className="rounded-xl border border-white/10 bg-[#0B1120]/90 px-3 py-2 text-right backdrop-blur-md shadow-xl z-50 relative">
-          <p className="text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Selected</p>
-          <p className="text-base font-extrabold text-white">{payload[0].value}{suffix}</p>
-          <p className="text-xs font-bold text-slate-400">{payload[0].payload.label}</p>
+        <div className="rounded-xl border border-black/8 bg-white px-3 py-2 text-right shadow-md z-50 relative">
+          <p className="text-[10px] font-extrabold uppercase tracking-wider text-[#666666]">Selected</p>
+          <p className="text-base font-extrabold text-[#111111]">{payload[0].value}{suffix}</p>
+          <p className="text-xs font-bold text-[#666666]">{payload[0].payload.label}</p>
         </div>
       )
     }
@@ -154,7 +154,7 @@ export function BarChart({ data, suffix = '', height = 'h-56' }: { data: Array<{
   }
 
   return (
-    <div className={`relative flex flex-col rounded-2xl border border-white/10 bg-[#0B1120]/40 backdrop-blur-sm p-4 ${height}`}>
+    <div className={`relative flex flex-col rounded-2xl border border-black/8 bg-white p-4 ${height} shadow-sm`}>
       <div className="h-full w-full">
         <ResponsiveContainer width="100%" height="100%">
           <RechartsBarChart data={data} margin={{ top: 20, right: 0, left: 0, bottom: 0 }}>
@@ -162,10 +162,10 @@ export function BarChart({ data, suffix = '', height = 'h-56' }: { data: Array<{
               dataKey="label" 
               axisLine={false} 
               tickLine={false} 
-              tick={{ fill: '#94a3b8', fontSize: 11, fontWeight: 800 }} 
+              tick={{ fill: '#666666', fontSize: 11, fontWeight: 800 }} 
               dy={10}
             />
-            <Tooltip content={<CustomTooltip />} cursor={{ fill: 'rgba(255,255,255,0.02)' }} />
+            <Tooltip content={<CustomTooltip />} cursor={{ fill: 'rgba(17,17,17,0.02)' }} />
             <Bar 
               dataKey="value" 
               radius={[6, 6, 6, 6]}
@@ -173,10 +173,10 @@ export function BarChart({ data, suffix = '', height = 'h-56' }: { data: Array<{
               onMouseLeave={() => setActiveIndex(null)}
               animationDuration={1000}
             >
-              {data.map((entry, index) => (
+              {data.map((_, index) => (
                 <Cell 
                   key={`cell-${index}`} 
-                  fill={activeIndex === index ? '#25c2a0' : '#3b82f6'} 
+                  fill={activeIndex === index ? '#2455e8' : 'rgba(36, 85, 232, 0.5)'} 
                   fillOpacity={activeIndex === index ? 1 : 0.6}
                   className="transition-all duration-300"
                 />
@@ -191,8 +191,8 @@ export function BarChart({ data, suffix = '', height = 'h-56' }: { data: Array<{
 
 export function ProgressBar({ value }: { value: number }) {
   return (
-    <div className="h-3 overflow-hidden rounded-full bg-white/10">
-      <div className="h-full rounded-full bg-gradient-to-r from-cyan-400 to-emerald-400 shadow-[0_0_10px_rgba(37,194,160,0.5)]" style={{ width: `${Math.min(value, 100)}%` }} />
+    <div className="h-3 overflow-hidden rounded-full bg-black/5">
+      <div className="h-full rounded-full bg-gradient-to-r from-[#2455e8] to-[#4f7bff] shadow-sm" style={{ width: `${Math.min(value, 100)}%` }} />
     </div>
   )
 }
@@ -204,13 +204,13 @@ export function FieldGroup({ children }: { children: ReactNode }) {
 export function SelectField({ label, value, options, onChange }: { label: string; value: string; options: string[]; onChange: (value: string) => void }) {
   return (
     <label className="block">
-      <span className="text-[17px] font-extrabold text-slate-300">{label}</span>
+      <span className="text-[17px] font-extrabold text-[#111111]">{label}</span>
       <select
-        className="mt-2 h-[56px] w-full rounded-xl border border-white/10 bg-white/5 px-4 text-[18px] font-bold text-white outline-none transition-shadow focus:border-cyan-500 focus:shadow-[0_0_0_4px_rgba(37,194,160,0.2)]"
+        className="mt-2 h-[56px] w-full rounded-xl border border-black/10 bg-white px-4 text-[18px] font-bold text-[#111111] outline-none transition-shadow focus:border-[#2455e8] focus:shadow-[0_0_0_4px_rgba(36,85,232,0.15)]"
         value={value}
         onChange={(event) => onChange(event.target.value)}
       >
-        {options.map((option) => <option key={option} className="bg-[#0B1120]">{option}</option>)}
+        {options.map((option) => <option key={option} className="bg-white text-[#111111]">{option}</option>)}
       </select>
     </label>
   )

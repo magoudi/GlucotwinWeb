@@ -527,6 +527,89 @@ async function respondToSupervisionRequest(req, res, next) {
   }
 }
 
+// --- APPOINTMENTS ---
+async function getAppointments(req, res, next) {
+  try {
+    const Appointment = require('../models/Appointment');
+    const appointments = await Appointment.find({ doctorId: req.user._id }).sort({ scheduledAt: 1 });
+    res.json({ success: true, data: appointments });
+  } catch (error) { next(error); }
+}
+
+async function createAppointment(req, res, next) {
+  try {
+    const Appointment = require('../models/Appointment');
+    const appointment = await Appointment.create({
+      doctorId: req.user._id,
+      ...req.body
+    });
+    res.json({ success: true, data: appointment });
+  } catch (error) { next(error); }
+}
+
+async function updateAppointment(req, res, next) {
+  try {
+    const Appointment = require('../models/Appointment');
+    const appointment = await Appointment.findOneAndUpdate(
+      { _id: req.params.id, doctorId: req.user._id },
+      req.body,
+      { new: true }
+    );
+    res.json({ success: true, data: appointment });
+  } catch (error) { next(error); }
+}
+
+// --- MESSAGES ---
+async function getMessages(req, res, next) {
+  try {
+    const Message = require('../models/Message');
+    const messages = await Message.find({ $or: [{ senderId: req.user._id }, { receiverId: req.user._id }] }).sort({ createdAt: -1 });
+    res.json({ success: true, data: messages });
+  } catch (error) { next(error); }
+}
+
+async function sendMessage(req, res, next) {
+  try {
+    const Message = require('../models/Message');
+    const message = await Message.create({
+      senderId: req.user._id,
+      receiverId: req.body.receiverId,
+      patientId: req.body.patientId || req.body.receiverId,
+      body: req.body.body
+    });
+    res.json({ success: true, data: message });
+  } catch (error) { next(error); }
+}
+
+// --- REPORTS ---
+async function generateReport(req, res, next) {
+  try {
+    const Report = require('../models/Report');
+    const report = await Report.create({
+      patientId: req.params.id,
+      doctorId: req.user._id,
+      reportType: req.body.reportType || 'clinical',
+      dateRange: req.body.dateRange || { start: new Date(Date.now() - 30*24*60*60*1000), end: new Date() },
+      fileUrl: '/mock-reports/doctor-report-' + Date.now() + '.pdf'
+    });
+    res.json({ success: true, data: report });
+  } catch (error) { next(error); }
+}
+
+// --- SETTINGS ---
+async function getSettings(req, res, next) {
+  try {
+    const settings = req.user.settings || { notifications: true, language: 'en' };
+    res.json({ success: true, data: settings });
+  } catch (error) { next(error); }
+}
+
+async function updateSettings(req, res, next) {
+  try {
+    res.json({ success: true, data: { ...req.body } });
+  } catch (error) { next(error); }
+}
+
 module.exports = {
   addNote,
   createTreatmentPlan,
@@ -543,4 +626,12 @@ module.exports = {
   signAndSendTreatmentPlan,
   updateBulkStatus,
   updateStatus,
+  getAppointments,
+  createAppointment,
+  updateAppointment,
+  getMessages,
+  sendMessage,
+  generateReport,
+  getSettings,
+  updateSettings,
 };

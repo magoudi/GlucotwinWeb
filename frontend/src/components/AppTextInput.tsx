@@ -16,10 +16,10 @@ export function AppTextInput({ label, value, type = 'text', onChange, onBlur, on
 
   return (
     <label className="block">
-      <span className="text-[17px] font-extrabold text-slate-300">{label}</span>
+      <span className="text-base leading-none font-semibold text-[#111111] 2xl:text-[18px]">{label}</span>
       <input
-        className={`mt-2 h-[56px] w-full rounded-xl border bg-white/5 backdrop-blur-sm px-4 text-[18px] font-semibold text-white outline-none transition-shadow focus:shadow-[0_0_0_4px_rgba(37,194,160,0.2)] ${
-          showError ? 'border-red-300' : 'border-white/10 focus:border-cyan-500'
+        className={`mt-2 h-12 w-full rounded-xl border bg-white px-4 text-base text-[#111111] outline-none transition-shadow focus:border-[#2455e8] focus:shadow-[0_0_0_3px_rgba(36,85,232,0.14)] 2xl:mt-3 2xl:h-[72px] 2xl:px-6 2xl:text-[19px] ${
+          showError ? 'border-red-400' : 'border-black/10 focus:border-[#2455e8]'
         }`}
         name={name}
         type={type}
@@ -34,7 +34,7 @@ export function AppTextInput({ label, value, type = 'text', onChange, onBlur, on
           }
         }}
       />
-      {showError && <p className="mt-2 text-sm font-bold text-red-700">{error}</p>}
+      {showError && <p className="mt-2 text-sm font-bold text-red-500">{error}</p>}
     </label>
   )
 }

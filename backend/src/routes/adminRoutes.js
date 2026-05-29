@@ -30,6 +30,14 @@ router.delete('/announcements/:id', adminController.deleteAnnouncement);
 router.get('/settings', adminController.getSettings);
 router.patch('/settings', adminController.updateSettings);
 
+// Missing Admin Features
+router.get('/subscriptions', adminController.getSubscriptions);
+router.patch('/subscriptions/:id', adminController.updateSubscription);
+router.get('/payments', adminController.getPayments);
+router.get('/email-logs', adminController.getEmailLogs);
+router.get('/feature-flags', adminController.getFeatureFlags);
+router.put('/feature-flags', adminController.updateFeatureFlags);
+
 router.get('/audit', adminController.getAudit);
 router.get('/audit/verify-integrity', adminController.verifyAuditIntegrity);
 router.get('/system', adminController.systemInfo);

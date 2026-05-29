@@ -5,13 +5,36 @@
   --font-sans: 'Outfit', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
+:root {
+  --bg: #f5f4f0;
+  --surface: #ffffff;
+  --surface-alt: #f0eeea;
+  --text: #111111;
+  --text-muted: #666666;
+  --text-subtle: #999999;
+  --accent: #2455e8;
+  --accent-hover: #1a44cc;
+  --accent-light: #e8eeff;
+  --stroke: rgba(17, 17, 17, 0.08);
+  --stroke-strong: rgba(17, 17, 17, 0.14);
+  --shadow-sm: 0 2px 8px rgba(17, 17, 17, 0.06);
+  --shadow-md: 0 8px 24px rgba(17, 17, 17, 0.08);
+  --shadow-lg: 0 18px 46px rgba(17, 17, 17, 0.10);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100svh;
-  background: #0B1120;
+  background: var(--bg);
   font-family: 'Outfit', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  color: #F8FAFC;
+  color: var(--text);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -21,3 +44,222 @@ body {
 #root {
   min-height: 100svh;
 }
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(17,17,17,0.12); border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(17,17,17,0.22); }
+
+
+/* ──────────────────────────────────────────────────────── */
+/* ── LIGHT THEME ACCESSIBILITY & UTILITY OVERRIDES ─────── */
+/* ──────────────────────────────────────────────────────── */
+
+/* 1. Global Surfaces & Cards overrides */
+.bg-\[\#0B1120\],
+.bg-\[\#0B1120\]\/40,
+.bg-\[\#0B1120\]\/50,
+.bg-\[\#0B1120\]\/60,
+.bg-\[\#0B1120\]\/70,
+.bg-\[\#0B1120\]\/90,
+.bg-\[\#0e1525\],
+.bg-slate-900,
+.bg-slate-950,
+[class*="bg-[#0B1120]"],
+[class*="bg-[#0e1525]"] {
+  background-color: var(--surface) !important;
+  color: var(--text) !important;
+}
+
+/* For glass cards/panels with opacity */
+[class*="bg-[#0B1120]/"] {
+  background-color: var(--surface) !important;
+  color: var(--text) !important;
+}
+
+/* 2. Global Borders overrides */
+.border-white\/10,
+.border-white\/20,
+.border-white\/5,
+.border-slate-800,
+.border-slate-700 {
+  border-color: var(--stroke) !important;
+}
+
+/* 3. Text color overrides (slate muted text on dark -> dark gray/slate muted on light) */
+.text-slate-100,
+.text-slate-200,
+.text-slate-300,
+.text-slate-400,
+.text-slate-500,
+.text-gray-200,
+.text-gray-300,
+.text-gray-400,
+.text-\[\#102326\] {
+  color: var(--text-muted) !important;
+}
+
+/* Override text-white inside cards/panels that we turned white */
+[class*="bg-[#0B1120]"] h1,
+[class*="bg-[#0B1120]"] h2,
+[class*="bg-[#0B1120]"] h3,
+[class*="bg-[#0B1120]"] h4,
+[class*="bg-[#0B1120]"] p,
+[class*="bg-[#0B1120]"] span,
+[class*="bg-[#0B1120]"] label,
+[class*="bg-[#0B1120]"] th,
+[class*="bg-[#0B1120]"] td,
+[class*="bg-[#0e1525]"] label,
+[class*="bg-[#0e1525]"] p,
+[class*="bg-[#0e1525]"] span,
+[class*="bg-[#0e1525]"] h1,
+[class*="bg-[#0e1525]"] h2,
+[class*="bg-[#0e1525]"] h3,
+[class*="bg-[#0e1525]"] h4,
+[class*="bg-slate-900"] h1,
+[class*="bg-slate-900"] h2,
+[class*="bg-slate-900"] h3,
+[class*="bg-slate-900"] h4,
+[class*="bg-slate-900"] p,
+[class*="bg-slate-900"] span {
+  color: var(--text) !important;
+}
+
+/* Fix text-white rendering inside white panels */
+.bg-white .text-white:not(button):not(a):not(span):not([class*="bg-"]):not([class*="from-"]),
+.DashboardPanel .text-white:not(button):not(a):not(span):not([class*="bg-"]):not([class*="from-"]),
+section .text-white:not(button):not(a):not(span):not([class*="bg-"]):not([class*="from-"]),
+td.text-white {
+  color: var(--text) !important;
+}
+
+/* 4. Dropdowns, Select fields, Inputs, and Sub-Cards */
+select.bg-\[\#0e1525\],
+select.bg-\[\#0B1120\],
+select[class*="bg-[#0e1525]"],
+input.bg-\[\#0e1525\],
+input.bg-\[\#0B1120\],
+input[class*="bg-[#0e1525]"] {
+  background-color: var(--surface) !important;
+  color: var(--text) !important;
+  border-color: var(--stroke) !important;
+}
+
+.bg-white\/5 {
+  background-color: var(--surface-alt) !important; /* light gray bg instead of pure white */
+  color: var(--text) !important;
+  border-color: var(--stroke) !important;
+}
+
+select option {
+  background-color: var(--surface) !important;
+  color: var(--text) !important;
+}
+
+/* 5. Accent colors (Cyan/Teal/Gradient highlights -> Blue theme) */
+.text-cyan-400,
+.text-cyan-300,
+.text-cyan-500,
+.text-teal-400,
+.text-teal-300,
+.text-teal-500 {
+  color: var(--accent) !important;
+}
+
+.bg-cyan-500,
+.bg-cyan-400,
+.bg-teal-500,
+.bg-teal-400,
+.from-cyan-500,
+.from-teal-500 {
+  background-color: var(--accent) !important;
+  background-image: none !important;
+}
+
+.border-cyan-500,
+.border-cyan-500\/20,
+.border-teal-500,
+.border-teal-500\/20 {
+  border-color: var(--accent) !important;
+}
+
+/* Buttons that have cyan backgrounds should have white text when turned blue */
+button.bg-cyan-500,
+button.bg-cyan-400,
+button.bg-teal-500,
+button.bg-teal-400,
+a.bg-cyan-500,
+a.bg-cyan-400,
+.text-\[\#0B1120\] {
+  color: #ffffff !important;
+}
+
+/* Focus and active styles */
+.focus\:border-cyan-500:focus,
+.focus\:ring-cyan-500:focus,
+.focus\:ring-cyan-500\/30:focus {
+  border-color: var(--accent) !important;
+  --tw-ring-color: rgba(36, 85, 232, 0.3) !important;
+}
+
+/* Specific Treatment for Admin / Doctor sidebars & items */
+.text-\[\#111111\] {
+  color: var(--text) !important;
+}
+
+/* 6. Medical Alert Contrast Restorations */
+.bg-rose-500\/10 {
+  background-color: #fee2e2 !important; /* soft red */
+}
+.bg-rose-500\/10 .text-rose-300,
+.bg-rose-500\/10 .text-slate-300,
+.bg-rose-500\/10 p,
+.bg-rose-500\/10 span,
+.text-rose-300 {
+  color: #991b1b !important; /* high contrast deep red */
+}
+
+.bg-amber-500\/10 {
+  background-color: #fef3c7 !important; /* soft yellow */
+}
+.bg-amber-500\/10 .text-amber-300,
+.bg-amber-500\/10 .text-slate-300,
+.bg-amber-500\/10 p,
+.bg-amber-500\/10 span,
+.text-amber-300 {
+  color: #92400e !important; /* high contrast amber */
+}
+
+.bg-emerald-500\/10 {
+  background-color: #d1fae5 !important; /* soft green */
+}
+.bg-emerald-500\/10 .text-emerald-300,
+.bg-emerald-500\/10 .text-slate-300,
+.bg-emerald-500\/10 p,
+.bg-emerald-500\/10 span,
+.text-emerald-300 {
+  color: #065f46 !important; /* high contrast emerald */
+}
+
+.bg-cyan-500\/10 {
+  background-color: #e0f7fa !important; /* soft cyan */
+}
+.bg-cyan-500\/10 .text-cyan-300,
+.bg-cyan-500\/10 .text-slate-300,
+.bg-cyan-500\/10 p,
+.bg-cyan-500\/10 span,
+.text-cyan-300 {
+  color: #006064 !important; /* high contrast cyan */
+}
+
+.bg-red-500\/10 {
+  background-color: #fee2e2 !important;
+}
+.bg-red-500\/10 .text-red-200,
+.bg-red-500\/10 p {
+  color: #b91c1c !important;
+}
+
+
+

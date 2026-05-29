@@ -68,20 +68,20 @@ function getSavedInputEvents(): TimelineEvent[] {
 }
 
 const TYPE_COLORS: Record<string, string> = {
-  meal: 'text-cyan-300',
-  insulin: 'text-violet-300',
-  activity: 'text-emerald-300',
-  sleep: 'text-indigo-300',
-  plan: 'text-amber-300',
-  bolus: 'text-rose-300',
-  food: 'text-lime-300',
-  whatif: 'text-orange-300',
+  meal: 'text-cyan-800 bg-cyan-50 border border-cyan-150',
+  insulin: 'text-violet-800 bg-violet-50 border border-violet-150',
+  activity: 'text-emerald-800 bg-emerald-50 border border-emerald-150',
+  sleep: 'text-indigo-800 bg-indigo-50 border border-indigo-150',
+  plan: 'text-amber-800 bg-amber-50 border border-amber-150',
+  bolus: 'text-rose-800 bg-rose-50 border border-rose-150',
+  food: 'text-emerald-850 bg-emerald-50 border border-emerald-150',
+  whatif: 'text-orange-850 bg-orange-50 border border-orange-150',
 }
 
 const TYPE_BORDERS: Record<string, string> = {
-  bolus: 'border-rose-500/20 bg-rose-500/[0.03]',
-  food: 'border-lime-500/20 bg-lime-500/[0.03]',
-  whatif: 'border-orange-500/20 bg-orange-500/[0.03]',
+  bolus: 'border-rose-100 bg-rose-50/30',
+  food: 'border-emerald-100 bg-emerald-50/30',
+  whatif: 'border-orange-100 bg-orange-50/30',
 }
 
 export function TimelinePage() {
@@ -129,25 +129,25 @@ export function TimelinePage() {
       <DashboardPanel>
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div>
-            <h2 className="text-[26px] font-extrabold text-white">Daily Event Stream</h2>
-            <p className="mt-2 text-[15px] text-slate-300">A timeline view that connects logged events to prediction context and care-team workflows.</p>
+            <h2 className="text-[26px] font-extrabold text-slate-900">Daily Event Stream</h2>
+            <p className="mt-2 text-[15px] text-slate-500">A timeline view that connects logged events to prediction context and care-team workflows.</p>
           </div>
           <StatusBadge status="Prototype" />
         </div>
         <div className="mt-6 space-y-4">
           {allEvents.map((event) => (
-            <div key={event.id} className={`rounded-2xl border p-5 ${TYPE_BORDERS[event.type] || 'border-white/10 bg-white/5'}`}>
+            <div key={event.id} className={`rounded-xl border p-5 transition-all hover:shadow-sm ${TYPE_BORDERS[event.type] || 'border-slate-200 bg-slate-50/20'}`}>
               <div className="flex flex-wrap items-start justify-between gap-4">
-                <div>
+                <div className="flex-1">
                   <div className="flex flex-wrap items-center gap-3">
-                    <p className={`text-xs font-extrabold uppercase tracking-wider ${TYPE_COLORS[event.type] || 'text-cyan-300'}`}>{event.type}</p>
+                    <span className={`text-[10px] font-extrabold uppercase tracking-widest px-2.5 py-1 rounded-md ${TYPE_COLORS[event.type] || 'text-cyan-800 bg-cyan-50'}`}>{event.type}</span>
                     <p className="text-xs font-bold text-slate-500">{event.timestampLabel}</p>
                   </div>
-                  <h3 className="mt-2 text-lg font-extrabold text-white">{event.title}</h3>
-                  <p className="mt-2 text-sm font-bold text-slate-300">{event.detail}</p>
-                  <p className="mt-3 text-sm text-slate-400">{event.impact}</p>
+                  <h3 className="mt-3 text-lg font-extrabold text-slate-900">{event.title}</h3>
+                  <p className="mt-1.5 text-sm font-semibold text-slate-600 leading-6">{event.detail}</p>
+                  <p className="mt-2 text-sm text-slate-500">{event.impact}</p>
                 </div>
-                <div className="text-right">
+                <div className="text-right shrink-0">
                   <StatusBadge status={toneBySeverity[event.severity]} />
                   <p className="mt-3 text-xs font-bold text-slate-500">{event.targetContext}</p>
                 </div>
@@ -159,3 +159,4 @@ export function TimelinePage() {
     </AppLayout>
   )
 }
+

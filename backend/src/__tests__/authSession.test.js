@@ -57,7 +57,7 @@ describe('auth session and validation flows', () => {
   });
 
   afterAll(async () => {
-    await mongoose.disconnect();
+    // rely on forceExit
   });
 
   test('doctor impersonation lifecycle is reflected by /auth/me and can be stopped safely', async () => {

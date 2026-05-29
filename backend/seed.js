@@ -2,7 +2,7 @@ if (require.main === module) {
   require("dotenv").config();
 }
 
-const { connectDb } = require("./db");
+const { connectDB } = require("./db");
 
 const defaultUserPageData = [
   {
@@ -356,7 +356,9 @@ const defaultUserPageData = [
 ];
 
 async function seed() {
-  const db = await connectDb();
+  await connectDB();
+  const mongoose = require('mongoose');
+  const db = mongoose.connection.db;
   const users = db.collection("users");
 
   await db

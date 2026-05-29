@@ -1,6 +1,16 @@
 const safetyService = require('../src/services/safetyService');
+const mongoose = require('mongoose');
+const connectDB = require('../src/config/db');
 
 describe('Safety Service', () => {
+  beforeAll(async () => {
+    await connectDB();
+  });
+
+  afterAll(async () => {
+    // rely on forceExit
+  });
+
   const defaultUser = {
     targetGlucoseMin: 70,
     targetGlucoseMax: 180,

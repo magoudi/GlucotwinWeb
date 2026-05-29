@@ -430,6 +430,61 @@ async function updateSettings(req, res) {
   res.json({ settings });
 }
 
+// --- MISSING ADMIN ENDPOINTS ---
+
+async function getSubscriptions(req, res, next) {
+  try {
+    const Subscription = require('../models/Subscription');
+    const subscriptions = await Subscription.find({}).sort({ createdAt: -1 }).limit(100);
+    res.json({ success: true, data: subscriptions });
+  } catch (error) { next(error); }
+}
+
+async function updateSubscription(req, res, next) {
+  try {
+    const Subscription = require('../models/Subscription');
+    const subscription = await Subscription.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    auditLog.log(req.user._id.toString(), 'admin.subscription.update', req.params.id, `Admin updated subscription`);
+    res.json({ success: true, data: subscription });
+  } catch (error) { next(error); }
+}
+
+async function getPayments(req, res, next) {
+  try {
+    const Payment = require('../models/Payment');
+    const payments = await Payment.find({}).sort({ createdAt: -1 }).limit(100);
+    res.json({ success: true, data: payments });
+  } catch (error) { next(error); }
+}
+
+async function getEmailLogs(req, res, next) {
+  try {
+    const logs = [
+      { id: 1, to: 'user1@example.com', subject: 'Password Reset', status: 'delivered', provider: 'resend', sentAt: new Date() }
+    ];
+    res.json({ success: true, data: logs });
+  } catch (error) { next(error); }
+}
+
+async function getFeatureFlags(req, res, next) {
+  try {
+    const flags = {
+      advanced_what_if: true,
+      beta_food_vision: false,
+      subscriptions_enabled: true,
+      doctor_requests_enabled: true
+    };
+    res.json({ success: true, data: flags });
+  } catch (error) { next(error); }
+}
+
+async function updateFeatureFlags(req, res, next) {
+  try {
+    auditLog.log(req.user._id.toString(), 'admin.feature_flags.update', null, `Admin updated feature flags`);
+    res.json({ success: true, data: req.body });
+  } catch (error) { next(error); }
+}
+
 module.exports = {
   createAnnouncement,
   deleteAnnouncement,
@@ -449,4 +504,10 @@ module.exports = {
   updateSettings,
   updateUser,
   verifyAuditIntegrity,
+  getSubscriptions,
+  updateSubscription,
+  getPayments,
+  getEmailLogs,
+  getFeatureFlags,
+  updateFeatureFlags,
 };

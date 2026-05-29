@@ -5,16 +5,16 @@ export function SubscriptionCancelPage() {
   return (
     <AppLayout>
       <div className="flex min-h-[60vh] items-center justify-center">
-        <div className="relative w-full max-w-lg overflow-hidden rounded-3xl border border-white/10 bg-[#0B1120]/40 p-10 text-center shadow-[0_18px_46px_rgba(0,0,0,0.3)] backdrop-blur-2xl">
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/[0.02] to-transparent" />
+        <div className="relative w-full max-w-lg overflow-hidden rounded-3xl border border-gray-200 bg-white p-10 text-center shadow-lg">
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-gray-50/50 to-transparent" />
           <div className="relative">
-            <div className="mx-auto mb-6 flex size-16 items-center justify-center rounded-2xl border border-slate-500/20 bg-slate-500/10">
-              <svg className="size-8 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <div className="mx-auto mb-6 flex size-16 items-center justify-center rounded-2xl border border-slate-200 bg-slate-50">
+              <svg className="size-8 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </div>
-            <h1 className="text-2xl font-extrabold text-white">Payment Cancelled</h1>
-            <p className="mt-3 text-sm font-bold text-slate-400">
+            <h1 className="text-2xl font-extrabold text-gray-900">Payment Cancelled</h1>
+            <p className="mt-3 text-sm font-bold text-gray-500">
               Your payment was cancelled. No charges have been made.
               <br />
               You can try again anytime.
@@ -28,7 +28,7 @@ export function SubscriptionCancelPage() {
               </Link>
               <Link
                 to="/dashboard"
-                className="rounded-xl border border-white/10 bg-white/5 px-8 py-3 text-sm font-extrabold text-white transition-colors hover:bg-white/10"
+                className="rounded-xl border border-gray-200 bg-gray-50 px-8 py-3 text-sm font-extrabold text-gray-700 transition-colors hover:bg-gray-100"
               >
                 Go to Dashboard
               </Link>

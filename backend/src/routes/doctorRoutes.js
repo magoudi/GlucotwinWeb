@@ -24,4 +24,20 @@ router.post('/patients/:id/treatment-plans/:planId/reply', doctorController.repl
 router.get('/supervision-requests', doctorController.getSupervisionRequests);
 router.post('/supervision-requests/:id/respond', doctorController.respondToSupervisionRequest);
 
+// Appointments
+router.get('/appointments', doctorController.getAppointments);
+router.post('/appointments', doctorController.createAppointment);
+router.put('/appointments/:id', doctorController.updateAppointment);
+
+// Messages
+router.get('/messages', doctorController.getMessages);
+router.post('/messages', doctorController.sendMessage);
+
+// Reports
+router.post('/patients/:id/reports/generate', doctorController.generateReport);
+
+// Settings
+router.get('/settings', doctorController.getSettings);
+router.put('/settings', doctorController.updateSettings);
+
 module.exports = router;

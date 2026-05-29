@@ -1,12 +1,52 @@
-const { Resend } = require('resend');
+const nodemailer = require('nodemailer');
 
-const emailProvider = process.env.EMAIL_PROVIDER || 'mock';
-const resendApiKey = process.env.RESEND_API_KEY;
 const emailFrom = process.env.EMAIL_FROM || 'GlucoTwin <noreply@glucotwin.com>';
+const smtpHost = process.env.SMTP_HOST;
+const smtpPort = process.env.SMTP_PORT || 587;
+const smtpUser = process.env.SMTP_USER;
+const smtpPass = process.env.SMTP_PASS;
 
-let resendClient = null;
-if (emailProvider === 'resend' && resendApiKey) {
-  resendClient = new Resend(resendApiKey);
+let transporter = null;
+let isEthereal = false;
+
+/**
+ * Initialize the Nodemailer transporter.
+ */
+async function getTransporter() {
+  if (transporter) return transporter;
+
+  // If real SMTP credentials are provided (like Gmail)
+  if (smtpHost && smtpUser && smtpPass) {
+    transporter = nodemailer.createTransport({
+      host: smtpHost,
+      port: smtpPort,
+      secure: smtpPort == 465, // true for 465, false for other ports
+      auth: {
+        user: smtpUser,
+        pass: smtpPass,
+      },
+    });
+    console.log(`[EmailService] Configured real SMTP server: ${smtpHost}`);
+    return transporter;
+  }
+
+  // Fallback to Ethereal Email (a real SMTP testing service that catches emails)
+  console.log('[EmailService] No SMTP credentials found in .env. Creating Ethereal test account...');
+  const testAccount = await nodemailer.createTestAccount();
+  
+  transporter = nodemailer.createTransport({
+    host: 'smtp.ethereal.email',
+    port: 587,
+    secure: false,
+    auth: {
+      user: testAccount.user,
+      pass: testAccount.pass,
+    },
+  });
+  
+  isEthereal = true;
+  console.log('[EmailService] Created Ethereal test account. Emails will be caught and a URL will be generated.');
+  return transporter;
 }
 
 /**
@@ -18,41 +58,31 @@ if (emailProvider === 'resend' && resendApiKey) {
  * @returns {Promise<boolean>} Success status
  */
 async function sendEmail({ to, subject, html }) {
-  if (emailProvider === 'mock') {
-    console.log('\n--- MOCK EMAIL ---');
-    console.log(`To:      ${to}`);
-    console.log(`From:    ${emailFrom}`);
-    console.log(`Subject: ${subject}`);
-    console.log('Body (HTML):');
-    console.log(html);
-    console.log('------------------\n');
-    return true;
-  }
+  try {
+    const tp = await getTransporter();
+    
+    const info = await tp.sendMail({
+      from: emailFrom,
+      to,
+      subject,
+      html,
+    });
 
-  if (emailProvider === 'resend' && resendClient) {
-    try {
-      const { data, error } = await resendClient.emails.send({
-        from: emailFrom,
-        to,
-        subject,
-        html,
-      });
-
-      if (error) {
-        console.error('[EmailService] Resend API Error:', error);
-        return false;
-      }
-
-      console.log(`[EmailService] Sent email to ${to} (ID: ${data.id})`);
-      return true;
-    } catch (err) {
-      console.error('[EmailService] Exception sending email:', err);
-      return false;
+    console.log(`[EmailService] Sent email to ${to} (Message ID: ${info.messageId})`);
+    
+    // If using Ethereal, print the link so the developer can see the email!
+    if (isEthereal) {
+      console.log('\n========================================================');
+      console.log('📧 TEST EMAIL SENT! View it in your browser here:');
+      console.log(`🔗 ${nodemailer.getTestMessageUrl(info)}`);
+      console.log('========================================================\n');
     }
-  }
 
-  console.error(`[EmailService] Unknown or misconfigured email provider: ${emailProvider}`);
-  return false;
+    return true;
+  } catch (err) {
+    console.error('[EmailService] Exception sending email:', err);
+    return false;
+  }
 }
 
 /**

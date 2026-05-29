@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useMemo } from 'react'
 import {
   ComposedChart,
   Area,
@@ -55,11 +55,11 @@ export function ClinicalAGPChart() {
       const median = payload.find((p: any) => p.dataKey === 'median')?.value
       const iqr = payload.find((p: any) => p.dataKey === 'iqr')?.value
       return (
-        <div className="rounded-xl border border-white/10 bg-[#0B1120]/90 px-3 py-2 text-right backdrop-blur-md shadow-xl z-50">
-          <p className="text-[10px] font-extrabold uppercase tracking-wider text-slate-500">{payload[0].payload.time}</p>
+        <div className="rounded-xl border border-black/8 bg-white px-3 py-2 text-right shadow-xl z-50">
+          <p className="text-[10px] font-extrabold uppercase tracking-wider text-[#666666]">{payload[0].payload.time}</p>
           <div className="mt-1 flex flex-col gap-1">
-            <p className="text-sm font-extrabold text-[#22d3ee]">Median: {median} mg/dL</p>
-            <p className="text-xs font-bold text-slate-400">25th-75th: {Math.round(iqr[0])}-{Math.round(iqr[1])} mg/dL</p>
+            <p className="text-sm font-extrabold text-[#2455e8]">Median: {median} mg/dL</p>
+            <p className="text-xs font-bold text-[#666666]">25th-75th: {Math.round(iqr[0])}-{Math.round(iqr[1])} mg/dL</p>
           </div>
         </div>
       )
@@ -68,15 +68,15 @@ export function ClinicalAGPChart() {
   }
 
   return (
-    <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#0B1120]/40 p-5 shadow-[0_18px_46px_rgba(0,0,0,0.3)] backdrop-blur-sm mb-6">
+    <div className="relative overflow-hidden rounded-2xl border border-black/8 bg-white p-5 shadow-sm mb-6">
       <div className="mb-6 flex items-center justify-between">
         <div>
-          <h3 className="text-sm font-extrabold text-white uppercase tracking-wider">Ambulatory Glucose Profile</h3>
-          <p className="text-xs text-slate-400 font-bold">14-Day Simulation Overlay</p>
+          <h3 className="text-sm font-extrabold text-[#111111] uppercase tracking-wider">Ambulatory Glucose Profile</h3>
+          <p className="text-xs text-[#666666] font-bold">14-Day Simulation Overlay</p>
         </div>
-        <div className="flex items-center gap-4 text-[10px] font-bold text-slate-400 uppercase">
-          <div className="flex items-center gap-1.5"><div className="size-2 rounded-full bg-[#22d3ee]/20 border border-[#22d3ee]/30" /> 25th-75th %</div>
-          <div className="flex items-center gap-1.5"><div className="h-0.5 w-3 bg-[#22d3ee]" /> Median</div>
+        <div className="flex items-center gap-4 text-[10px] font-bold text-[#666666] uppercase">
+          <div className="flex items-center gap-1.5"><div className="size-2 rounded-full bg-[#2455e8]/10 border border-[#2455e8]/30" /> 25th-75th %</div>
+          <div className="flex items-center gap-1.5"><div className="h-0.5 w-3 bg-[#2455e8]" /> Median</div>
         </div>
       </div>
       
@@ -98,29 +98,29 @@ export function ClinicalAGPChart() {
               }}
               axisLine={false}
               tickLine={false}
-              tick={{ fill: '#64748b', fontSize: 10, fontWeight: 800 }}
+              tick={{ fill: '#666666', fontSize: 10, fontWeight: 800 }}
               dy={10}
             />
             <YAxis 
               domain={[40, 220]} 
               axisLine={false} 
               tickLine={false} 
-              tick={{ fill: '#64748b', fontSize: 10, fontWeight: 700 }}
+              tick={{ fill: '#666666', fontSize: 10, fontWeight: 700 }}
               width={35}
             />
-            <Tooltip content={<CustomTooltip />} cursor={{ stroke: '#475569', strokeWidth: 1, strokeDasharray: '4 4' }} />
+            <Tooltip content={<CustomTooltip />} cursor={{ stroke: '#999999', strokeWidth: 1, strokeDasharray: '4 4' }} />
             
             {/* Target Range Background */}
-            <ReferenceArea y1={70} y2={180} fill="rgba(37,194,160,0.04)" />
-            <ReferenceLine y={180} stroke="rgba(37,194,160,0.2)" strokeDasharray="4 4" />
-            <ReferenceLine y={70} stroke="rgba(244,63,94,0.2)" strokeDasharray="4 4" />
+            <ReferenceArea y1={70} y2={180} fill="rgba(37,194,160,0.02)" />
+            <ReferenceLine y={180} stroke="rgba(37,194,160,0.15)" strokeDasharray="4 4" />
+            <ReferenceLine y={70} stroke="rgba(244,63,94,0.15)" strokeDasharray="4 4" />
 
             {/* IQR Area */}
             <Area 
               type="monotone" 
               dataKey="iqr" 
               stroke="none" 
-              fill="rgba(34,211,238,0.15)" 
+              fill="rgba(36,85,232,0.1)" 
               isAnimationActive={true}
               animationDuration={1500}
             />
@@ -129,10 +129,10 @@ export function ClinicalAGPChart() {
             <Line 
               type="monotone" 
               dataKey="median" 
-              stroke="#22d3ee" 
+              stroke="#2455e8" 
               strokeWidth={3} 
               dot={false} 
-              activeDot={{ r: 4, fill: '#0B1120', stroke: '#22d3ee', strokeWidth: 2 }}
+              activeDot={{ r: 4, fill: '#ffffff', stroke: '#2455e8', strokeWidth: 2 }}
               isAnimationActive={true}
               animationDuration={1500}
             />

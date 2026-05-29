@@ -35,4 +35,18 @@ router.get('/doctors', patientController.listAvailableDoctors);
 router.get('/doctor-requests', patientController.getMyDoctorRequests);
 router.post('/doctor-requests', patientController.createDoctorRequest);
 
+// Reports
+router.get('/reports', patientController.getReports);
+router.post('/reports/generate', patientController.generateReport);
+
+// Reminders
+router.get('/reminders', patientController.getReminders);
+router.post('/reminders', patientController.createReminder);
+router.put('/reminders/:id', patientController.updateReminder);
+router.delete('/reminders/:id', patientController.deleteReminder);
+
+// Settings
+router.get('/settings', patientController.getSettings);
+router.put('/settings', patientController.updateSettings);
+
 module.exports = router;

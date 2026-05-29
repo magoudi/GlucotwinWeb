@@ -56,7 +56,7 @@ export function ProfileDetailsPage() {
       />
       <PrototypeNotice>Simulation only. This prototype uses clinical data and is not for real medical use.</PrototypeNotice>
 
-      <DashboardPanel className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/10">
+      <DashboardPanel className="bg-gradient-to-br from-gray-50 to-white border border-gray-200 shadow-sm">
         <div className="flex flex-wrap items-center justify-between gap-6">
           <div className="flex flex-wrap items-center gap-5">
             <div className="flex size-24 items-center justify-center rounded-3xl bg-gradient-to-br from-[#25c2a0] to-[#2f6fee] text-[34px] font-extrabold text-white shadow-[0_18px_38px_rgba(47,111,238,0.2)]">
@@ -68,13 +68,13 @@ export function ProfileDetailsPage() {
                 <StatusBadge status="Connected to MongoDB" />
                 <StatusBadge status="Prototype" />
               </div>
-              <h2 className="mt-4 text-[clamp(2rem,4vw,3rem)] leading-none font-extrabold text-white">{account?.fullName}</h2>
-              <p className="mt-2 text-[18px] font-bold text-slate-300">{account?.email}</p>
+              <h2 className="mt-4 text-[clamp(2rem,4vw,3rem)] leading-none font-extrabold text-gray-900">{account?.fullName}</h2>
+              <p className="mt-2 text-[18px] font-bold text-slate-600">{account?.email}</p>
             </div>
           </div>
-          <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm px-5 py-4 text-right">
-            <p className="text-sm font-extrabold uppercase tracking-[0.08em] text-slate-400">Profile source</p>
-            <p className="mt-1 text-[22px] font-extrabold text-white">MongoDB user record</p>
+          <div className="rounded-2xl border border-gray-200 bg-gray-50 px-5 py-4 text-right shadow-sm">
+            <p className="text-sm font-extrabold uppercase tracking-[0.08em] text-slate-500">Profile source</p>
+            <p className="mt-1 text-[22px] font-extrabold text-gray-900">MongoDB user record</p>
           </div>
         </div>
       </DashboardPanel>
@@ -107,10 +107,10 @@ export function ProfileDetailsPage() {
             <AppTextInput label="Target minimum" type="number" value={String(draft.targetGlucoseMin)} onChange={(value) => setDraft((current) => ({ ...current, targetGlucoseMin: Number(value) || 0 }))} />
             <AppTextInput label="Target maximum" type="number" value={String(draft.targetGlucoseMax)} onChange={(value) => setDraft((current) => ({ ...current, targetGlucoseMax: Number(value) || 0 }))} />
           </div>
-          <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-5">
-            <p className="text-[15px] font-extrabold uppercase tracking-[0.08em] text-slate-400">Safety range preview</p>
-            <p className="mt-2 text-[28px] font-extrabold text-white">{draft.targetGlucoseMin}-{draft.targetGlucoseMax} {draft.glucoseUnit}</p>
-            <p className="mt-2 text-[16px] font-semibold leading-6 text-slate-300">Shown as profile context only. Clinical thresholds are not active medical logic in this prototype.</p>
+          <div className="mt-6 rounded-2xl border border-gray-200 bg-gray-50 p-5 shadow-sm">
+            <p className="text-[15px] font-extrabold uppercase tracking-[0.08em] text-slate-500">Safety range preview</p>
+            <p className="mt-2 text-[28px] font-extrabold text-gray-900">{draft.targetGlucoseMin}-{draft.targetGlucoseMax} {draft.glucoseUnit}</p>
+            <p className="mt-2 text-[16px] font-semibold leading-6 text-slate-600">Shown as profile context only. Clinical thresholds are not active medical logic in this prototype.</p>
           </div>
         </DashboardPanel>
 
@@ -121,10 +121,10 @@ export function ProfileDetailsPage() {
             <AppTextInput label="Correction factor" type="number" value={String(draft.correctionFactor)} onChange={(value) => setDraft((current) => ({ ...current, correctionFactor: Number(value) || 0 }))} />
             <AppTextInput label="Insulin sensitivity" type="number" value={String(draft.insulinSensitivity)} onChange={(value) => setDraft((current) => ({ ...current, insulinSensitivity: Number(value) || 0 }))} />
           </div>
-          <h3 className="mt-8 text-[22px] font-extrabold text-white">Basal profile</h3>
+          <h3 className="mt-8 text-[22px] font-extrabold text-gray-900">Basal profile</h3>
           <div className="mt-4 grid gap-3 sm:grid-cols-2">
             {basalProfile.map((block) => (
-              <div key={block.time} className="flex justify-between rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm px-4 py-3 text-[16px] font-extrabold text-white">
+              <div key={block.time} className="flex justify-between rounded-2xl border border-gray-200 bg-gray-50 px-4 py-3 text-[16px] font-extrabold text-gray-900 shadow-sm">
                 <span>{block.time}</span><span>{block.rate.toFixed(2)} U/h</span>
               </div>
             ))}
@@ -137,12 +137,12 @@ export function ProfileDetailsPage() {
           <SectionHeader title="Model/prototype settings" detail="Current AI and physiological model states are demonstration-only." />
           <div className="mt-6 space-y-4">
             {mock.modelStatus.map((item) => (
-              <div key={item.label} className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-4">
+              <div key={item.label} className="rounded-2xl border border-gray-200 bg-gray-50 p-4 shadow-sm">
                 <div className="flex flex-wrap justify-between gap-3">
-                  <p className="text-[18px] font-extrabold text-white">{item.label}</p>
+                  <p className="text-[18px] font-extrabold text-gray-900">{item.label}</p>
                   <StatusBadge status={item.status} />
                 </div>
-                <p className="mt-2 text-[16px] font-semibold text-slate-300">{item.value}</p>
+                <p className="mt-2 text-[16px] font-semibold text-slate-600">{item.value}</p>
               </div>
             ))}
           </div>
@@ -152,10 +152,10 @@ export function ProfileDetailsPage() {
           <SectionHeader title="Data sources" detail="Connections show what future integrations could look like." />
           <div className="mt-6 space-y-4">
             {mock.connectedSources.map((source) => (
-              <div key={source.name} className="flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-4">
+              <div key={source.name} className="flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-gray-200 bg-gray-50 p-4 shadow-sm">
                 <div>
-                  <p className="text-[18px] font-extrabold text-white">{source.name}</p>
-                  <p className="mt-1 text-[15px] font-bold text-slate-300">Last sync: {source.lastSync}</p>
+                  <p className="text-[18px] font-extrabold text-gray-900">{source.name}</p>
+                  <p className="mt-1 text-[15px] font-bold text-slate-600">Last sync: {source.lastSync}</p>
                 </div>
                 <StatusBadge status="Data" />
               </div>
@@ -164,11 +164,11 @@ export function ProfileDetailsPage() {
         </DashboardPanel>
       </div>
 
-      <DashboardPanel className="border-amber-500/30 bg-amber-500/10 backdrop-blur-sm">
+      <DashboardPanel className="border-amber-300 bg-amber-50 shadow-sm">
         <div className="flex flex-wrap items-center justify-between gap-5">
           <div>
             <SectionHeader title="Safety disclaimer" detail="Profile settings and model statuses support this prototype experience only." />
-            <p className="mt-4 max-w-4xl text-[17px] font-semibold leading-7 text-amber-200">
+            <p className="mt-4 max-w-4xl text-[17px] font-semibold leading-7 text-amber-700">
               Simulation only. This prototype uses clinical data and is not for real medical use. Do not use GlucoTwin prototype output for real insulin dosing or treatment decisions.
             </p>
           </div>
@@ -181,8 +181,8 @@ export function ProfileDetailsPage() {
             {saveState === 'saving' ? 'Saving profile...' : 'Save profile'}
           </button>
         </div>
-        {saveState === 'success' && <p className="mt-4 text-[17px] font-extrabold text-emerald-400">Profile saved to MongoDB.</p>}
-        {saveState === 'error' && <p className="mt-4 text-[17px] font-extrabold text-rose-400">{error}</p>}
+        {saveState === 'success' && <p className="mt-4 text-[17px] font-extrabold text-emerald-600">Profile saved to MongoDB.</p>}
+        {saveState === 'error' && <p className="mt-4 text-[17px] font-extrabold text-rose-600">{error}</p>}
       </DashboardPanel>
     </AppLayout>
   )
@@ -191,8 +191,8 @@ export function ProfileDetailsPage() {
 function SectionHeader({ title, detail }: { title: string; detail: string }) {
   return (
     <div>
-      <h2 className="text-[26px] font-extrabold text-white">{title}</h2>
-      <p className="mt-2 text-[16px] font-semibold leading-6 text-slate-400">{detail}</p>
+      <h2 className="text-[26px] font-extrabold text-gray-900">{title}</h2>
+      <p className="mt-2 text-[16px] font-semibold leading-6 text-slate-500">{detail}</p>
     </div>
   )
 }

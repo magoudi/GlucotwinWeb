@@ -1,12 +1,18 @@
 const request = require('supertest');
 const app = require('../src/app');
 const userStore = require('../src/services/userStore');
+const mongoose = require('mongoose');
+const connectDB = require('../src/config/db');
 
 describe('GlucoTwin Simulator Routes', () => {
   let token;
   let patientId;
 
   beforeAll(async () => {
+    await connectDB();
+    const User = require('../src/models/User');
+    await User.deleteMany({ email: 'sim_test@glucotwin.com' });
+
     const user = await userStore.createUser({
       email: 'sim_test@glucotwin.com',
       password: 'password123',
@@ -25,6 +31,10 @@ describe('GlucoTwin Simulator Routes', () => {
       .send({ email: 'sim_test@glucotwin.com', password: 'password123' });
     
     token = res.headers['set-cookie'];
+  });
+
+  afterAll(async () => {
+    // rely on forceExit
   });
 
   describe('POST /api/glucotwin/bolus/predict', () => {

@@ -40,35 +40,36 @@ export function BasalPlanPage() {
       <PrototypeNotice>{data.note}</PrototypeNotice>
       <div className="grid gap-6 2xl:grid-cols-[1.25fr_0.85fr]">
         <DashboardPanel>
-          <h2 className="text-[30px] font-extrabold text-white">24-hour basal schedule</h2>
-          <p className="mt-2 text-[16px] font-bold text-slate-400">Prototype version {version}. Values are simulation-only U/h blocks.</p>
+          <h2 className="text-[26px] font-extrabold text-slate-900">24-hour basal schedule</h2>
+          <p className="mt-2 text-[15px] font-medium text-slate-500">Prototype version {version}. Values are simulation-only U/h blocks.</p>
           <div className="mt-6 grid gap-4 md:grid-cols-3">
             {data.schedule.map((block) => (
-              <div key={block.time} className="rounded-lg border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
-                <p className="text-[16px] font-bold text-slate-400">{block.time}</p>
-                <p className="mt-2 text-[32px] font-extrabold text-white">{block.rate.toFixed(2)} U/h</p>
-                <p className="mt-2 text-[16px] text-slate-300">Predicted response {block.response} mg/dL</p>
+              <div key={block.time} className="rounded-xl border border-slate-100 bg-slate-50/80 p-5">
+                <p className="text-[14px] font-bold text-slate-500">{block.time}</p>
+                <p className="mt-1.5 text-[28px] font-extrabold text-slate-900">{block.rate.toFixed(2)} U/h</p>
+                <p className="mt-2 text-[14px] font-medium text-slate-600">Predicted response: <span className="font-extrabold text-[#2455e8]">{block.response} mg/dL</span></p>
               </div>
             ))}
           </div>
         </DashboardPanel>
         <DashboardPanel>
-          <h2 className="text-[30px] font-extrabold text-white">Physiological check</h2>
-          <div className="mt-6 rounded-lg border border-white/10 p-5">
+          <h2 className="text-[26px] font-extrabold text-slate-900">Physiological check</h2>
+          <div className="mt-6 rounded-xl border border-slate-200 p-5 bg-slate-50/40">
             <StatusBadge status={data.safety.status} />
-            <p className="mt-4 text-[22px] font-extrabold text-white">{data.safety.label}</p>
-            <p className="mt-2 text-[17px] leading-7 text-slate-300">{data.safety.message}</p>
+            <p className="mt-4 text-[20px] font-extrabold text-slate-900">{data.safety.label}</p>
+            <p className="mt-2 text-[15px] leading-6 text-slate-600">{data.safety.message}</p>
           </div>
-          <p className="mt-5 rounded-lg border border-rose-500/30 bg-rose-500/10 p-4 text-[17px] font-bold leading-7 text-rose-300 backdrop-blur-sm">
-            Warning: prototype data only. Not medical advice and not connected to a real pump.
+          <p className="mt-5 rounded-xl border border-rose-200 bg-rose-50 p-4 text-[14px] font-semibold leading-6 text-rose-800">
+            Warning: Prototype data only. Not medical advice and not connected to a real pump.
           </p>
-          {savedMsg && <p className="mt-4 rounded-lg border border-emerald-500/30 bg-emerald-500/10 p-4 text-[17px] font-bold text-emerald-400">{savedMsg}</p>}
+          {savedMsg && <p className="mt-4 rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-[14px] font-semibold text-emerald-800">{savedMsg}</p>}
         </DashboardPanel>
       </div>
       <DashboardPanel>
-        <h2 className="text-[30px] font-extrabold text-white">Predicted glucose response</h2>
+        <h2 className="text-[26px] font-extrabold text-slate-900">Predicted glucose response</h2>
         <MiniLineChart data={data.predictedResponse} height="mt-6 h-[320px]" />
       </DashboardPanel>
     </AppLayout>
   )
 }
+

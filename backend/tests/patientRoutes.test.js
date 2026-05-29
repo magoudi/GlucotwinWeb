@@ -1,12 +1,18 @@
 const request = require('supertest');
 const app = require('../src/app');
 const userStore = require('../src/services/userStore');
+const mongoose = require('mongoose');
+const connectDB = require('../src/config/db');
 
 describe('Patient Routes', () => {
   let authCookie;
   let patientId;
 
   beforeAll(async () => {
+    await connectDB();
+    const User = require('../src/models/User');
+    await User.deleteMany({ email: 'patient_test@glucotwin.com' });
+
     // Create a mock patient
     const user = await userStore.createUser({
       email: 'patient_test@glucotwin.com',
@@ -25,6 +31,10 @@ describe('Patient Routes', () => {
       .send({ email: 'patient_test@glucotwin.com', password: 'password123' });
     
     authCookie = res.headers['set-cookie'];
+  });
+
+  afterAll(async () => {
+    // rely on forceExit
   });
 
   describe('GET /api/patient/summary', () => {

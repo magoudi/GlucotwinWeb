@@ -59,7 +59,7 @@ describe('GlucoTwin API Tests', () => {
   });
 
   afterAll(async () => {
-    await mongoose.disconnect();
+    // rely on forceExit
   });
 
   let patientCookies;

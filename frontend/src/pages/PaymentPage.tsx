@@ -88,30 +88,30 @@ export function PaymentPage() {
       />
 
       <div className="mx-auto mt-8 max-w-xl">
-        <div className="rounded-3xl border border-white/10 bg-[#0B1120]/60 p-8 shadow-[0_18px_46px_rgba(0,0,0,0.3)] backdrop-blur-2xl">
-          <h2 className="mb-6 text-xl font-extrabold text-white">Payment Information</h2>
+        <div className="rounded-3xl border border-gray-200 bg-white p-8 shadow-lg">
+          <h2 className="mb-6 text-xl font-extrabold text-gray-900">Payment Information</h2>
 
           {error && (
-            <div className="mb-6 rounded-xl border border-red-500/30 bg-red-500/10 p-4 text-sm font-bold text-red-300">
+            <div className="mb-6 rounded-xl border border-red-200 bg-red-50 p-4 text-sm font-bold text-red-600">
               {error}
             </div>
           )}
 
           <form onSubmit={handlePayment} className="space-y-5">
             <div>
-              <label className="mb-2 block text-sm font-extrabold text-slate-300">Name on Card</label>
+              <label className="mb-2 block text-sm font-extrabold text-slate-600">Name on Card</label>
               <input
                 type="text"
                 required
                 value={cardName}
                 onChange={(e) => setCardName(e.target.value)}
                 placeholder="John Doe"
-                className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder-slate-500 outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"
+                className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 placeholder-gray-400 outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
               />
             </div>
 
             <div>
-              <label className="mb-2 block text-sm font-extrabold text-slate-300">Visa Card Number</label>
+              <label className="mb-2 block text-sm font-extrabold text-slate-600">Visa Card Number</label>
               <input
                 type="text"
                 required
@@ -124,14 +124,14 @@ export function PaymentPage() {
                   setCardNumber(val)
                 }}
                 placeholder="4000 1234 5678 9010"
-                className={`w-full rounded-xl border bg-white/5 px-4 py-3 text-white placeholder-slate-500 outline-none focus:ring-1 ${fieldErrors.cardNumber ? 'border-red-500/50 focus:border-red-500 focus:ring-red-500' : 'border-white/10 focus:border-cyan-500 focus:ring-cyan-500'}`}
+                className={`w-full rounded-xl border bg-gray-50 px-4 py-3 text-gray-900 placeholder-gray-400 outline-none focus:ring-1 ${fieldErrors.cardNumber ? 'border-red-300 focus:border-red-500 focus:ring-red-500' : 'border-gray-200 focus:border-blue-500 focus:ring-blue-500'}`}
               />
-              {fieldErrors.cardNumber && <p className="mt-1.5 text-xs font-bold text-red-400">{fieldErrors.cardNumber}</p>}
+              {fieldErrors.cardNumber && <p className="mt-1.5 text-xs font-bold text-red-600">{fieldErrors.cardNumber}</p>}
             </div>
 
             <div className="grid grid-cols-2 gap-5">
               <div>
-                <label className="mb-2 block text-sm font-extrabold text-slate-300">Expiry Date</label>
+                <label className="mb-2 block text-sm font-extrabold text-slate-600">Expiry Date</label>
                 <input
                   type="text"
                   required
@@ -145,13 +145,13 @@ export function PaymentPage() {
                     setExpiryDate(val)
                   }}
                   placeholder="MM/YY"
-                  className={`w-full rounded-xl border bg-white/5 px-4 py-3 text-white placeholder-slate-500 outline-none focus:ring-1 ${fieldErrors.expiryDate ? 'border-red-500/50 focus:border-red-500 focus:ring-red-500' : 'border-white/10 focus:border-cyan-500 focus:ring-cyan-500'}`}
+                  className={`w-full rounded-xl border bg-gray-50 px-4 py-3 text-gray-900 placeholder-gray-400 outline-none focus:ring-1 ${fieldErrors.expiryDate ? 'border-red-300 focus:border-red-500 focus:ring-red-500' : 'border-gray-200 focus:border-blue-500 focus:ring-blue-500'}`}
                 />
-                {fieldErrors.expiryDate && <p className="mt-1.5 text-xs font-bold text-red-400">{fieldErrors.expiryDate}</p>}
+                {fieldErrors.expiryDate && <p className="mt-1.5 text-xs font-bold text-red-600">{fieldErrors.expiryDate}</p>}
               </div>
 
               <div>
-                <label className="mb-2 block text-sm font-extrabold text-slate-300">CVV</label>
+                <label className="mb-2 block text-sm font-extrabold text-slate-600">CVV</label>
                 <input
                   type="text"
                   required
@@ -159,14 +159,14 @@ export function PaymentPage() {
                   value={cvv}
                   onChange={(e) => setCvv(e.target.value.replace(/\D/g, ''))}
                   placeholder="123"
-                  className={`w-full rounded-xl border bg-white/5 px-4 py-3 text-white placeholder-slate-500 outline-none focus:ring-1 ${fieldErrors.cvv ? 'border-red-500/50 focus:border-red-500 focus:ring-red-500' : 'border-white/10 focus:border-cyan-500 focus:ring-cyan-500'}`}
+                  className={`w-full rounded-xl border bg-gray-50 px-4 py-3 text-gray-900 placeholder-gray-400 outline-none focus:ring-1 ${fieldErrors.cvv ? 'border-red-300 focus:border-red-500 focus:ring-red-500' : 'border-gray-200 focus:border-blue-500 focus:ring-blue-500'}`}
                 />
-                {fieldErrors.cvv && <p className="mt-1.5 text-xs font-bold text-red-400">{fieldErrors.cvv}</p>}
+                {fieldErrors.cvv && <p className="mt-1.5 text-xs font-bold text-red-600">{fieldErrors.cvv}</p>}
               </div>
             </div>
 
             <div className="mt-8 flex items-center justify-between gap-4 pt-4">
-              <Link to="/subscription" className="text-sm font-bold text-slate-400 hover:text-white">
+              <Link to="/subscription" className="text-sm font-bold text-gray-500 hover:text-gray-900">
                 Cancel
               </Link>
               <button

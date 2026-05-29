@@ -54,12 +54,12 @@ export function SelectDoctorPage() {
 
   const statusBadge = (status: string) => {
     const styles: Record<string, string> = {
-      pending: 'border-amber-500/30 bg-amber-500/15 text-amber-400',
-      accepted: 'border-emerald-500/30 bg-emerald-500/15 text-emerald-400',
-      rejected: 'border-red-500/30 bg-red-500/15 text-red-400',
+      pending: 'border-amber-200 bg-amber-50 text-amber-700',
+      accepted: 'border-emerald-200 bg-emerald-50 text-emerald-700',
+      rejected: 'border-red-200 bg-red-50 text-red-700',
     }
     return (
-      <span className={`inline-flex rounded-lg border px-2.5 py-0.5 text-xs font-extrabold capitalize ${styles[status] || 'border-slate-500/30 bg-slate-500/15 text-slate-400'}`}>
+      <span className={`inline-flex rounded-lg border px-2.5 py-0.5 text-xs font-extrabold capitalize ${styles[status] || 'border-slate-200 bg-slate-50 text-slate-600'}`}>
         {status}
       </span>
     )
@@ -73,13 +73,13 @@ export function SelectDoctorPage() {
       />
 
       {actionMsg && (
-        <div className="rounded-2xl border border-cyan-500/30 bg-cyan-500/10 px-5 py-3 text-sm font-bold text-cyan-300 shadow-lg">
+        <div className="rounded-2xl border border-cyan-200 bg-cyan-50 px-5 py-3 text-sm font-bold text-cyan-700 shadow-sm">
           {actionMsg}
         </div>
       )}
 
       {error && (
-        <div className="rounded-2xl border border-red-500/30 bg-red-500/10 p-6 text-center text-red-300">
+        <div className="rounded-2xl border border-red-200 bg-red-50 p-6 text-center text-red-700">
           {error}
         </div>
       )}
@@ -89,8 +89,9 @@ export function SelectDoctorPage() {
           <div className="size-10 animate-spin rounded-full border-4 border-cyan-500/30 border-t-cyan-500" />
         </div>
       ) : doctors.length === 0 ? (
-        <DashboardPanel title="Available Doctors">
+        <DashboardPanel>
           <div className="py-12 text-center">
+            <h3 className="text-lg font-extrabold text-[#111111] mb-2">Available Doctors</h3>
             <p className="text-sm font-bold text-slate-500">No doctors are currently available.</p>
             <p className="mt-1 text-xs text-slate-600">Check back later or contact your clinic directly.</p>
           </div>
@@ -102,17 +103,17 @@ export function SelectDoctorPage() {
             return (
               <div
                 key={doctor.id}
-                className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#0B1120]/40 p-6 shadow-[0_18px_46px_rgba(0,0,0,0.3)] backdrop-blur-2xl transition-all hover:border-white/20"
+                className="relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-6 shadow-md transition-all hover:border-gray-300"
               >
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/[0.02] to-transparent" />
                 <div className="relative">
                   {/* Doctor Avatar */}
                   <div className="mb-4 flex items-center gap-3">
-                    <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-400/20 to-indigo-500/20 text-lg font-extrabold text-blue-400 border border-blue-500/20">
+                    <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 text-lg font-extrabold text-blue-600 border border-blue-200">
                       {doctor.fullName.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase()}
                     </div>
                     <div>
-                      <h3 className="font-extrabold text-white">{doctor.fullName}</h3>
+                      <h3 className="font-extrabold text-gray-900">{doctor.fullName}</h3>
                       <p className="text-xs font-bold text-slate-500">{doctor.email}</p>
                     </div>
                   </div>
@@ -122,13 +123,13 @@ export function SelectDoctorPage() {
                     {doctor.specialty && (
                       <div className="flex items-center gap-2">
                         <span className="text-xs font-bold text-slate-500">Specialty</span>
-                        <span className="text-sm font-bold text-slate-300">{doctor.specialty}</span>
+                        <span className="text-sm font-bold text-slate-600">{doctor.specialty}</span>
                       </div>
                     )}
                     {doctor.clinicName && (
                       <div className="flex items-center gap-2">
                         <span className="text-xs font-bold text-slate-500">Clinic</span>
-                        <span className="text-sm font-bold text-slate-300">{doctor.clinicName}</span>
+                        <span className="text-sm font-bold text-slate-600">{doctor.clinicName}</span>
                       </div>
                     )}
                   </div>
@@ -136,7 +137,7 @@ export function SelectDoctorPage() {
                   {/* Action */}
                   {existingRequest ? (
                     <div className="flex items-center justify-between">
-                      <span className="text-xs font-bold text-slate-400">Request Status:</span>
+                      <span className="text-xs font-bold text-slate-500">Request Status:</span>
                       {statusBadge(existingRequest.status)}
                     </div>
                   ) : (

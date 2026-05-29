@@ -17,16 +17,16 @@ export function AppLayout({ children }: AppLayoutProps) {
   }, [])
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-[#f5f4f0]">
       <Sidebar />
-      <main className="min-w-0 bg-[#0B1120] bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(37,194,160,0.15),rgba(255,255,255,0))] md:ml-[236px] xl:ml-[260px]">
+      <main className="min-w-0 bg-[#f5f4f0] md:ml-[236px] xl:ml-[260px]">
         <ImpersonationBanner />
 
         {/* Announcements Banner */}
         {announcements.map(a => (
-          <div key={a.id} className={`flex items-center justify-center px-4 py-2.5 text-sm font-bold text-white shadow-md md:px-8 ${
+          <div key={a.id} className={`flex items-center justify-center px-4 py-2.5 text-sm font-bold text-white shadow-sm md:px-8 ${
             a.type === 'info' ? 'bg-blue-600' :
-            a.type === 'warning' ? 'bg-amber-600' :
+            a.type === 'warning' ? 'bg-amber-500' :
             a.type === 'error' ? 'bg-red-600' : 'bg-emerald-600'
           }`}>
             <span className="mr-2 font-extrabold uppercase opacity-80">[{a.title}]</span> {a.message}

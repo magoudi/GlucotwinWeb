@@ -3,6 +3,7 @@ export const appNavGroups = [
     title: 'Today',
     items: [
       { label: 'Dashboard', path: '/dashboard' },
+      { label: 'Reminders', path: '/reminders' },
     ]
   },
   {
@@ -19,6 +20,7 @@ export const appNavGroups = [
     items: [
       { label: 'Analytics', path: '/analytics' },
       { label: 'Timeline', path: '/timeline' },
+      { label: 'Reports', path: '/reports' },
     ]
   },
   {
@@ -26,6 +28,7 @@ export const appNavGroups = [
     items: [
       { label: 'Overview', path: '/care-team' },
       { label: 'Find a Doctor', path: '/select-doctor' },
+      { label: 'Education', path: '/education' },
     ]
   },
   {
@@ -33,6 +36,7 @@ export const appNavGroups = [
     items: [
       { label: 'Connectors', path: '/connectors' },
       { label: 'Subscription', path: '/subscription' },
+      { label: 'App Settings', path: '/settings' },
     ]
   }
 ]

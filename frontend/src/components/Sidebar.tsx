@@ -11,25 +11,27 @@ export function Sidebar() {
 
   return (
     <aside
-      className="sticky top-0 z-30 flex shrink-0 flex-col border-r border-white/5 bg-[#0B1120]/60 bg-[radial-gradient(circle_at_top_left,rgba(37,194,160,0.12),transparent_40%),linear-gradient(180deg,rgba(11,17,32,0.6)_0%,rgba(6,9,16,0.9)_100%)] px-4 py-4 text-white backdrop-blur-2xl md:fixed md:inset-y-0 md:left-0 md:h-screen md:w-[236px] md:overflow-y-auto md:px-5 md:py-6 xl:w-[260px] xl:px-6 xl:py-8"
+      className="sticky top-0 z-30 flex shrink-0 flex-col border-r border-black/8 bg-white px-4 py-4 md:fixed md:inset-y-0 md:left-0 md:h-screen md:w-[236px] md:overflow-y-auto md:px-5 md:py-6 xl:w-[260px] xl:px-6 xl:py-8"
       data-node-id="17:3"
     >
-      <Link to="/dashboard" className="mb-4 md:mb-8 xl:mb-[56px]">
-        <Logo dark/>
+      <Link to="/dashboard" className="mb-4 md:mb-8 xl:mb-[40px]">
+        <Logo />
       </Link>
       <nav className="flex gap-2 overflow-x-auto pb-1 md:flex-col md:overflow-visible md:pb-0">
         {appNavGroups.map((group) => (
           <div key={group.title} className="mb-4">
-            <h4 className="mb-2 px-3 text-[11px] font-extrabold uppercase tracking-wider text-slate-500 xl:px-4">{group.title}</h4>
+            <h4 className="mb-1.5 px-3 text-[10px] font-extrabold uppercase tracking-widest text-[#999999] xl:px-4">{group.title}</h4>
             {group.items.map((item) => (
               <NavLink
                 key={item.path}
                 to={item.path}
                 className={({ isActive }) =>
                   [
-                    'group flex h-11 shrink-0 items-center rounded-xl px-3 text-sm leading-[1.3] font-semibold transition-all duration-300 xl:h-[40px] xl:px-4 xl:text-base',
-                    'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#25c2a0]',
-                    isActive ? 'bg-gradient-to-r from-[#25c2a0]/20 to-transparent text-white shadow-[inset_3px_0_0_#25c2a0]' : 'text-slate-400 hover:translate-x-1 hover:bg-white/[0.04] hover:text-white',
+                    'group flex h-10 shrink-0 items-center rounded-xl px-3 text-sm leading-[1.3] font-semibold transition-all duration-200 xl:h-[38px] xl:px-4',
+                    'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2455e8]',
+                    isActive
+                      ? 'bg-[#e8eeff] text-[#2455e8] shadow-[inset_3px_0_0_#2455e8]'
+                      : 'text-[#555555] hover:bg-[#f5f4f0] hover:text-[#111111]',
                   ].join(' ')
                 }
               >
@@ -43,9 +45,11 @@ export function Sidebar() {
             to="/admin"
             className={({ isActive }) =>
               [
-                'group mt-2 flex h-11 shrink-0 items-center gap-2 rounded-xl border border-violet-500/20 px-3 text-sm leading-[1.3] font-semibold transition-all duration-300 xl:h-[46px] xl:px-4 xl:text-base',
+                'group mt-2 flex h-10 shrink-0 items-center gap-2 rounded-xl border border-violet-200 px-3 text-sm leading-[1.3] font-semibold transition-all duration-200 xl:h-[42px] xl:px-4',
                 'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-400',
-                isActive ? 'bg-gradient-to-r from-violet-500/20 to-transparent text-violet-300 shadow-[inset_3px_0_0_#8b5cf6]' : 'text-violet-400 hover:translate-x-1 hover:bg-violet-500/[0.06] hover:text-violet-300',
+                isActive
+                  ? 'bg-violet-50 text-violet-700 shadow-[inset_3px_0_0_#7c3aed]'
+                  : 'text-violet-600 hover:bg-violet-50 hover:text-violet-800',
               ].join(' ')
             }
           >
@@ -58,9 +62,11 @@ export function Sidebar() {
             to="/doctor"
             className={({ isActive }) =>
               [
-                'group mt-2 flex h-11 shrink-0 items-center gap-2 rounded-xl border border-cyan-500/20 px-3 text-sm leading-[1.3] font-semibold transition-all duration-300 xl:h-[46px] xl:px-4 xl:text-base',
+                'group mt-2 flex h-10 shrink-0 items-center gap-2 rounded-xl border border-cyan-200 px-3 text-sm leading-[1.3] font-semibold transition-all duration-200 xl:h-[42px] xl:px-4',
                 'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400',
-                isActive ? 'bg-gradient-to-r from-cyan-500/20 to-transparent text-cyan-300 shadow-[inset_3px_0_0_#22d3ee]' : 'text-cyan-400 hover:translate-x-1 hover:bg-cyan-500/[0.06] hover:text-cyan-300',
+                isActive
+                  ? 'bg-cyan-50 text-cyan-700 shadow-[inset_3px_0_0_#0891b2]'
+                  : 'text-cyan-600 hover:bg-cyan-50 hover:text-cyan-800',
               ].join(' ')
             }
           >
@@ -75,25 +81,27 @@ export function Sidebar() {
         to="/profile"
         className={({ isActive }) =>
           [
-            'group mt-4 flex items-center gap-3 rounded-2xl border border-white/15 bg-white/[0.07] p-3 text-left shadow-[0_18px_40px_rgba(0,0,0,0.18)] transition-all md:mt-auto',
-            'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#25c2a0]',
-            isActive ? 'border-[#25c2a0]/60 bg-white/[0.14]' : 'hover:-translate-y-0.5 hover:border-white/25 hover:bg-white/[0.12]',
+            'group mt-4 flex items-center gap-3 rounded-2xl border bg-white p-3 text-left shadow-[0_2px_8px_rgba(17,17,17,0.06)] transition-all md:mt-auto',
+            'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2455e8]',
+            isActive
+              ? 'border-[#2455e8]/30 bg-[#e8eeff]'
+              : 'border-black/8 hover:-translate-y-0.5 hover:border-black/14 hover:shadow-[0_4px_16px_rgba(17,17,17,0.10)]',
           ].join(' ')
         }
         aria-label="Open account profile"
       >
-        <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#25c2a0] to-[#2f6fee] text-[16px] font-extrabold text-white shadow-[0_10px_24px_rgba(37,194,160,0.22)]">
+        <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#2455e8] to-[#4f7bff] text-[15px] font-extrabold text-white shadow-[0_4px_12px_rgba(36,85,232,0.28)]">
           {initials}
         </div>
         <div className="min-w-0 flex-1">
-          <p className="text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#89dcca]">Account</p>
-          <p className="truncate text-[15px] font-extrabold text-white">{displayName}</p>
-          <p className="truncate text-[13px] font-semibold text-[#c7dada]">@{username}</p>
+          <p className="text-[10px] font-extrabold uppercase tracking-[0.08em] text-[#2455e8]">Account</p>
+          <p className="truncate text-[14px] font-extrabold text-[#111111]">{displayName}</p>
+          <p className="truncate text-[12px] font-semibold text-[#666666]">@{username}</p>
         </div>
-        <span className="text-[22px] font-extrabold text-[#89dcca] transition-transform group-hover:translate-x-0.5" aria-hidden="true">›</span>
+        <span className="text-[20px] font-bold text-[#aaaaaa] transition-transform group-hover:translate-x-0.5" aria-hidden="true">›</span>
       </NavLink>
       <button
-        className="mt-3 rounded-xl border border-white/10 px-4 py-3 text-left text-[14px] font-extrabold text-[#c7dada] transition-colors hover:bg-white/[0.08] hover:text-white"
+        className="mt-3 rounded-xl border border-black/8 px-4 py-2.5 text-left text-[13px] font-semibold text-[#666666] transition-colors hover:bg-[#f5f4f0] hover:text-[#111111]"
         type="button"
         onClick={async () => {
           await logout()
